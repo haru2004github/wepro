@@ -1,0 +1,224 @@
+
+        body {
+            font-family: "Poppins", sans-serif
+        }
+        
+        /* --- TIMELINE CUSTOM STYLES --- */
+
+        /* === MOBILE (Vertical) START: Keep existing logic for left-aligned vertical line === */
+
+        .timeline-container {
+            position: relative;
+            padding-top: 0;
+            padding-bottom: 0;
+            display: block; 
+        }
+
+        /* Vertical line on the left for mobile */
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 1rem; 
+            width: 3px;
+            background-color: #3b82f6; 
+            height: 100%;
+            transform: none;
+        }
+
+        .timeline-item {
+            margin-left: 2rem; /* Push content away from line */
+            width: calc(100% - 2rem);
+            margin-bottom: 2rem;
+            position: relative;
+            text-align: left;
+            flex: none;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        /* Dot positioned near the top of the card for mobile */
+        .timeline-item .timeline-dot {
+            left: 0.8rem;
+            right: auto;
+            top: 1.5rem; 
+            transform: none;
+            position: absolute;
+            z-index: 10;
+        }
+
+        /* Mobile Card Content Flow and style */
+        .timeline-item .timeline-content {
+            border-left: 4px solid #3b82f6; 
+            border-right: none;
+            position: relative; 
+            width: 100%;
+            padding: 1rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item .timeline-content h4 {
+            position: relative; 
+            transform: none;
+            font-size: 1.25rem; 
+            text-align: left;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-item .timeline-content .item-description {
+            text-align: left;
+            padding-left: 0;
+            margin-top: 0.5rem;
+            font-size: 0.875rem; 
+        }
+
+        .timeline-item .timeline-content .book-container {
+            display: flex;
+            align-items: center;
+        }
+        .timeline-item .timeline-content .product-title {
+            font-size: 1rem;
+        }
+
+        /* Hide desktop arrows on mobile */
+        .timeline-item .timeline-content:after {
+            content: none !important;
+        }
+
+        /* === MOBILE (Vertical) END === */
+
+
+        /* === DESKTOP/TABLET (Staggered/Alternating) START === */
+        @media (min-width: 768px) {
+            
+            .timeline-container {
+                display: block; 
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                max-width: 90%; /* Center the timeline */
+            }
+
+            /* Central Vertical Line (Bolder and less distracting) */
+            .timeline-container:before {
+                left: 50%;
+                width: 6px; 
+                background-color: #d1d5db; /* Light gray line */
+                transform: translateX(-50%);
+            }
+            
+            .timeline-item {
+                margin: 0;
+                width: 100%;
+                position: relative;
+                margin-bottom: 4rem; 
+            }
+
+            .timeline-item:after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            
+            /* Large Date Dot centered on the line */
+            .timeline-item .timeline-dot {
+                position: absolute;
+                left: 50%;
+                top: 0.5rem;
+                transform: translateX(-50%);
+                z-index: 20;
+                width: 30px; 
+                height: 30px;
+                background-color: #dc2626; /* Red Dot */
+            }
+
+            /* Content Cards */
+            .timeline-item .timeline-content {
+                width: 45%; 
+                padding: 1.5rem;
+                border-radius: 0.75rem;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Stronger shadow */
+                background-color: #ffffffff; /* Soft gray card background */
+                border: none;
+                position: relative;
+                min-height: 120px;
+            }
+            
+            /* Year positioned as a large label centered on the dot */
+            .timeline-item .timeline-content h4 {
+                position: absolute; 
+                top: 0px; 
+                left: 50%;
+                transform: translateX(-50%) translateY(-100%) translateY(-0.5rem);
+                color: #1e3a8a; 
+                font-weight: 800;
+                font-size: 2rem;
+                background-color: #ffffff; /* Background to lift the date */
+                padding: 0 0.5rem;
+                border-radius: 0.25rem;
+            }
+
+            /* Odd Items (Left Side) */
+            .timeline-item:nth-child(odd) .timeline-content {
+                float: left;
+                margin-right: 5%; 
+                text-align: right;
+            }
+            .timeline-item:nth-child(odd) .timeline-content .book-container {
+                justify-content: flex-end; 
+                display: flex;
+                flex-direction: row-reverse; /* Put image on the right for right-aligned text */
+                align-items: center;
+                gap: 0.75rem;
+            }
+            .timeline-item:nth-child(odd) .timeline-content .book-container > div {
+                text-align: right;
+            }
+
+            /* Even Items (Right Side) */
+            .timeline-item:nth-child(even) .timeline-content {
+                float: right;
+                margin-left: 5%; 
+                text-align: left;
+            }
+             .timeline-item:nth-child(even) .timeline-content .book-container {
+                justify-content: flex-start; 
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+            }
+            .timeline-item:nth-child(even) .timeline-content .book-container > div {
+                text-align: left;
+            }
+            
+            /* Arrow Pointers pointing to the center line */
+            /* Odd/Left Arrow (Right-pointing triangle) */
+            .timeline-item:nth-child(odd) .timeline-content:after {
+                content: '';
+                position: absolute;
+                top: 25px;
+                right: -15px; 
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 15px solid #f3f4f6; 
+                z-index: 10;
+            }
+            /* Even/Right Arrow (Left-pointing triangle) */
+            .timeline-item:nth-child(even) .timeline-content:after {
+                content: '';
+                position: absolute;
+                top: 25px;
+                left: -15px; 
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-right: 15px solid #f3f4f6; 
+                z-index: 10;
+            }
+
+        }
+        /* === DESKTOP/TABLET (Staggered/Alternating) END === */
+   

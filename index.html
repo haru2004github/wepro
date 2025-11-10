@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="timeline.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -145,6 +146,122 @@
         
 
     </main>
+
+
+    <!-- === NEW PRODUCTS TIMELINE SECTION (STAGGERED) === -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container max-w-7xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-red-600 font-semibold">
+                    <span class="h-1.5 w-1.5 rounded-full bg-red-600"></span>
+                    OUR PRODUCTS
+                </p>
+                <h2 class="mt-3 text-4xl md:text-5xl font-extrabold text-slate-900">
+                    Innovation Timeline
+                </h2>
+                <p class="mt-4 text-slate-600">
+                    Tracking our journey through flagship cybersecurity and digital learning products.
+                </p>
+            </div>
+
+            <!-- Timeline Container: Switches from vertical (mobile) to staggered (tablet/PC) -->
+            <div class="timeline-container max-w-6xl mx-auto md:px-0">
+                
+                <!-- Product 1: 2014 - OS for Hackers (Left Side on Desktop) -->
+                <div class="timeline-item relative py-4 group">
+                    <div class="timeline-dot absolute w-6 h-6 bg-blue-600 rounded-full shadow-lg z-10 top-1/2 transform -translate-y-1/2 ring-4 ring-white"></div>
+                    <div class="timeline-content bg-slate-100 p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl relative w-full">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-1">2014</h4>
+                        <div class="book-container mb-4">
+                            <!-- Placeholder for Image -->
+                            <img src="./assets/img/products/1.png" alt="Book Image" class="h-32 w-auto ">
+                            <div>
+                                <p class="product-title text-lg font-semibold text-blue-600">Operation System for Hackers and Forensic Investigations</p>
+                            </div>
+                        </div>
+                        <p class="item-description text-base text-gray-700">
+                            Top 10 Bestseller in Myanmar, establishing foundational knowledge in cybersecurity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 2: 2020 - Computer Vision Foundation (Right Side on Desktop) -->
+                <div class="timeline-item relative py-4 group">
+                    <div class="timeline-dot absolute w-6 h-6 bg-green-500 rounded-full shadow-lg z-10 top-1/2 transform -translate-y-1/2 ring-4 ring-white"></div>
+                    <div class="timeline-content bg-slate-100 p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl relative w-full">
+                         <h4 class="text-2xl font-bold text-gray-900 mb-1">2020</h4>
+                         <div class="book-container mb-4">
+                            <!-- Placeholder for Image -->
+                            <img src="./assets/img/products/2.png" alt="Book Image" class="h-32 w-auto ">
+                            <div>
+                                <p class="product-title text-lg font-semibold text-green-600">Foundation Course For Computer Vision</p>
+                            </div>
+                        </div>
+                        <p class="item-description text-base text-gray-700">
+                            A comprehensive guide to the fundamentals of computer vision and image processing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 3: 2021 - Deep Learning in CV (Left Side on Desktop) -->
+                <div class="timeline-item relative py-4 group">
+                    <div class="timeline-dot absolute w-6 h-6 bg-blue-600 rounded-full shadow-lg z-10 top-1/2 transform -translate-y-1/2 ring-4 ring-white"></div>
+                    <div class="timeline-content bg-slate-100 p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl relative w-full">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-1">2021</h4>
+                        <div class="book-container mb-4 flex justify-end">
+                            <!-- Placeholder for Image -->
+                            <img src="./assets/img/products/3.png" alt="Book Image" class="h-32 w-auto ">
+                            <div>
+                                <p class="product-title text-lg font-semibold text-blue-600">Deep Learning in Computer Vision</p>
+                            </div>
+                        </div>
+                        <p class="item-description text-base text-gray-700">
+                            Advanced material focusing on neural networks and deep learning applications in CV.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 4: 2022 - SIRP SOP (Right Side on Desktop) -->
+                <div class="timeline-item relative py-4 group">
+                    <div class="timeline-dot absolute w-6 h-6 bg-red-600 rounded-full shadow-lg z-10 top-1/2 transform -translate-y-1/2 ring-4 ring-white"></div>
+                    <div class="timeline-content bg-slate-100 p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl relative w-full">
+                         <h4 class="text-2xl font-bold text-gray-900 mb-1">2022</h4>
+                         <div class="book-container mb-4">
+                            <!-- Placeholder for Image -->
+                            <img src="./assets/img/products/4.png" alt="Book Image" class="h-32 w-auto ">
+                            <div>
+                                <p class="product-title text-lg font-semibold text-red-600">Standard Operation Procedure (SOP) For SIRP</p>
+                            </div>
+                        </div>
+                        <p class="item-description text-base text-gray-700">
+                            Detailed SOP for Security Incident Response Plan, crucial for enterprise security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Product 5: 2022 - Penetration Testing SOP (Left Side on Desktop) -->
+                <div class="timeline-item relative py-4 group">
+                    <div class="timeline-dot absolute w-6 h-6 bg-blue-600 rounded-full shadow-lg z-10 top-1/2 transform -translate-y-1/2 ring-4 ring-white"></div>
+                    <div class="timeline-content bg-slate-100 p-6 rounded-xl shadow-lg transition duration-300 hover:shadow-xl relative w-full">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-1">2022</h4>
+                        <div class="book-container mb-4">
+                            <!-- Placeholder for Image -->
+                            <img src="./assets/img/products/5.png" alt="Book Image" class="h-32 w-auto ">
+                            <div>
+                                <p class="product-title text-lg font-semibold text-blue-600">Standard Operation Procedure (SOP) For Penetration Testing</p>
+                            </div>
+                        </div>
+                        <p class="item-description text-base text-gray-700">
+                            Practical SOP for professional penetration testing methodologies and execution.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- === END PRODUCTS TIMELINE SECTION === -->
 
     <!-- Partners Section -->
         <section class="py-16 bg-white">
@@ -319,6 +436,9 @@
 
         </div>
         </section>
+    <!-- Partners section end  -->
+
+
 
 
 
