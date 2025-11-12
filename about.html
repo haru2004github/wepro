@@ -1,30 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Nest - Premium Digital Services</title>
+    <title>We Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJc5f89YBEK/zYyE7fNn03R1H6p+2K1r/iYfM5f5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/img/bullet.png">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
+     <style>
+
+        
         body {
-            font-family: "Poppins", sans-serif
+             font-family: "Poppins", sans-serif
         }
+
+        /* navbar toggle start  */
+.one.active{ 
+    transform-origin: left!important;
+    transform: rotate(40deg)!important;
+
+    }
+    .two.active{
+        transform: translateX(-30px)!important;
+        opacity: 0!important;
+    }
+    .three.active{ 
+        transform-origin: left!important;
+        transform: rotate(-40deg) !important;
+
+    }
+    .navDisplay.active{
+        display: block !important;
+    }
+ /* navbar toggle end  */
     </style>
 </head>
 <body class="bg-[#F8FAFC]">
 
     <!-- Header Section -->
-
-    <div class="bg-gradient-to-r from-[#1804fe] to-red-600 text-white py-2 ">
+    <div class="bg-gradient-to-r from-[#1804fe] to-red-600 text-white py-2 hidden lg:block">
         <div class="mx-auto container px-10 flex justify-between ">
             <h1 class="text-sm">
             Vumetric is now part of the TELUS family! <a href="" class="underline font-medium">Learn more →</a>
@@ -45,36 +68,74 @@
         
     </div>
 
-    <header class="bg-slate-100/80 backdrop-blur-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-2">
-            <div class="flex items-center justify-between">
+   <header class="z-50 bg-slate-100/80 backdrop-blur-sm sticky top-0 z-50 shadow shadow-lg md:shadow-0">
+        <nav class="max-w-7xl xl:container mx-auto px-6 py-2">
+            <div class="flex items-center justify-between ">
+                <!-- Logo -->
                 <a href="./index.html" class="flex items-center gap-2">
-                    <img src="./assets/img/weprologo.png" class="h-16" alt="WePro Logo">
+                    <img src="./assets/img/weprologo.png" class="h-16" alt="">
                 </a>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="./index.html" class="text-slate-800 hover:text-red-600 duration-300 font-semibold border-b-2 border-b-slate-100 hover:border-red-600">Home</a>
-                    <a href="./services.html" class="text-slate-800 hover:text-red-600 duration-300 font-semibold border-b-2 border-b-slate-100 hover:border-red-600">Services</a>
-                    <a href="./about.html" class="text-slate-800 hover:text-red-600 duration-300 font-semibold border-b-2 border-b-slate-100 hover:border-red-600">About</a>
-                    <a href="./careers.html" class="text-slate-800 hover:text-red-600 duration-300 font-semibold border-b-2 border-b-slate-100 hover:border-red-600">Careers</a>
-                    <a href="./knowledge.html" class="text-slate-800 hover:text-red-600 duration-300 font-semibold border-b-2 border-b-slate-100 hover:border-red-600">Knowledge</a>
-                    <a href="./contact.html" class="bg-[#1804fe] text-white font-semibold py-2 px-3 rounded-md shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
-                        Contact us
-                    </a>
-                </div>
+
+                <!-- Desktop Navigation Links -->
+                <aside id="aside" class="z-40 fixed  border border-t-0 border-l-0 border-b-0 border-r-slate-400/60 md:static top-0 left-0 bg-white backdrop-blur-xl md:bg-transparent md:border-none backdrop-blur-xl md:backdrop-blur-0 text-blue-800 w-56 md:w-auto h-screen md:h-auto z-50  duration-300 -translate-x-full md:translate-x-0">
+                    <div class="realtive md:static flex justify-center items-center h-full md:h-auto flex-col md:flex-row gap-y-4 md:gap-y-0 items-center md:space-x-8 ">
+                        <ul class="flex flex-col md:flex-row gap-y-4 md:gap-y-0 items-center md:space-x-8 text-base ">
+                            <li class="bg-red-500 md:bg-transparent w-full text-center hover:bg-red-600 duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
+                                <a href="./index.html" >Home</a>
+                            </li>
+
+                            <li class="bg-red-500 md:bg-transparent w-full text-center hover:bg-red-600 duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
+                                <a href="./services.html">
+                                    Services
+                                </a>
+                            </li>
+
+                            <li class="bg-red-500 md:bg-transparent w-full text-center hover:bg-red-600 duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
+                                <a href="./about.html">
+                                    About
+                                </a>
+                            </li>
+
+                            <li class="hidden bg-red-500 md:bg-transparent w-full text-center hover:bg-red-600 duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
+                                <a href="./careers.html">
+                                    Careers
+                                </a>
+                            </li>
+
+                            <li class="bg-red-500 md:bg-transparent w-full text-center hover:bg-red-600 duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
+                                <a href="./knowledge.html">
+                                    Knowledges
+                                </a>
+                            </li>
+                            
+                            
+                            
+                            
+                        </ul>
+
+                        <div class="">
+                                <a class="bg-[#1804fe] text-white font-semibold py-2 px-3 rounded-md shadow-md hover:bg-red-700 transition-all duration-300 transform hover:scale-105 block" href="./contact.html" >
+                                Contact us
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M4 6h16M4 12h16m-7 6h7"/>
-                        </svg>
-                    </button>
+                <div class="scale-90  w-8 h-6 navIcon  flex items-center cursor-pointer">
+                    <div class="absolute w-8 h-1 duration-500 top-0 bg-blue-600 rounded-full one "></div>
+                    <div class="absolute w-8 h-1 duration-500 bg-blue-600 rounded-full two"></div>
+                    <div class="absolute w-8 h-1 duration-500 bottom-0 bg-blue-600 rounded-full three"></div>
                 </div>
             </div>
+            </div>
+
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+    <main  class="max-w-7xl mx-auto px-6 py-16 md:py-24">
 
         <h1 class="text-4xl font-bold text-center">
             About Us
@@ -91,7 +152,7 @@
     </main>
 
     <!-- Capabilities Section (New) -->
-    <section class="py-16 bg-white">
+    <section id="capabilities" class="py-16 bg-white">
         <div class="container mx-auto px-6 md:px-0 ">
             
             <!-- Capabilities Header -->
@@ -105,7 +166,7 @@
             
             <!-- Capabilities Grid -->
             <!-- Using a flexible grid layout for responsiveness (2 columns on mobile, 5 on desktop) -->
-            <div class="grid grid-cols-2 md:grid-cols-6 gap-6 justify-center">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 justify-center">
 
                 <!-- 1. Technical Experts -->
                 <div class="col-span-1 p-6 text-center rounded-xl border-4 border-blue-500/20 shadow-lg hover:shadow-2xl transition duration-300 bg-white/90 flex flex-col items-center">
@@ -154,14 +215,14 @@
     </section>
 
     <!-- Vision and Mission Section (Responsive) -->
-    <section class="py-16 bg-white/50">
+    <section  class="py-16 bg-white/50">
         <div class="container max-w-7xl mx-auto px-6 md:px-0 ">
             
             <!-- Vision and Mission Cards -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 
                 <!-- Vision Block -->
-                <div class="p-8 rounded-xl shadow-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white 
+                <div id="vision" class="p-8 rounded-xl shadow-2xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white 
                             transform hover:scale-[1.01] transition duration-300 h-full flex flex-col">
                     <h3 class="text-3xl font-bold mb-6 text-center tracking-wider uppercase border-b border-white/50 pb-2">VISION</h3>
                     <ul class="space-y-4 text-lg flex-grow">
@@ -182,7 +243,7 @@
                 </div>
 
                 <!-- Mission Block -->
-                <div class="p-8 rounded-xl shadow-2xl bg-gradient-to-r from-blue-900 to-indigo-700 text-white 
+                <div id="mission" class="p-8 rounded-xl shadow-2xl bg-gradient-to-r from-blue-900 to-indigo-700 text-white 
                             transform hover:scale-[1.01] transition duration-300 h-full flex flex-col">
                     <h3 class="text-3xl font-bold mb-6 text-center tracking-wider uppercase border-b border-white/50 pb-2">MISSION</h3>
                     <ul class="space-y-4 text-lg flex-grow">
@@ -206,5 +267,259 @@
         </div>
     </section>
 
+    <!-- footer start  -->
+    <footer class="  container mx-auto md:flex justify-between items-start mt-5 md:mt-10  px-5 ">
+ 
+        <!-- Logo start  -->
+         <section class="">
+    
+            <article class="hidden md:block pr-5 lg:pr-0">
+                <img class="w-36" src="./assets/img/weprologo.png" alt="">
+            </article>
+         </section>
+        <!-- Logo end -->
+
+        <!-- footer line start  -->
+         <section class="grid grid-cols-3 md:grid-col justify-center gap-5 md:flex md:space-x-4">
+
+            <!-- home start  -->
+            <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./index.html#home" class="text-base lg:text-lg font-semibold">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./index.html#products" class=""> 
+                            Products
+                        </a>
+                    </li>
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./index.html#partners" class=""> 
+                            Partners
+                        </a>
+                    </li>
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./index.html#customers" class="">
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- home end  -->
+
+              <!-- about start  -->
+              <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./services.html" class="text-base lg:text-lg font-semibold">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#offensive" class=""> 
+                            Offensive Security
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#defensive" class="">
+                            Defensive Security
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html/methodologies" class="">
+                            Methodologies
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- about end  -->
+
+            <!--About start  -->
+            <article class="">
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./about.html" class="text-base lg:text-lg font-semibold">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#capabilities" class=""> 
+                            Capabilities
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#vision" class=""> 
+                            Vision
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#mission" class=""> 
+                            Mission
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!--About end  -->
+
+            <!-- Knowledge start  -->
+            <article class="">
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./knowledge.html" class="text-base lg:text-lg font-semibold">
+                            Knowledge
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./knowledge.html#cyber" class=""> 
+                            Cyber Security
+                        </a>
+                    </li>
+
+                </ul>
+            </article>
+            <!-- Knowledge end  -->
+
+
+
+            <!-- Contact us start  -->
+            <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./contact.html" class="text-base lg:text-lg font-semibold">
+                            Contact 
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                        <a href="./contact.html#map" class=""> 
+                            Map
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-4 xl:hidden ">
+                    <div class="flex justify-center">
+                        <img class="w-20 xl:w-32" src="./assets/img/LocationQr.png" alt="Qr Code for location!">
+                    </div>
+                    <p class="text-center text-base md:ml-2 md:mx-0 md:text-xl xl:text-2xl text-blue-900 ">
+                        Location
+                    </p>
+                 </div>
+            </article>
+            <!-- Contact us end  -->
+
+            <!-- Scan= start   -->
+            <article class="md:hidden w-full col-span-3">
+               <section class="">
+                   <article class="flex md:gap-x-0 items-center justify-center">
+                       
+       
+                       <!-- Apps start  -->
+                       <div class="md:mt-5">
+                           <div class="flex items-center gap-x-2">
+                            <a target="_blank" href="https://facebook.com/wepro" class="bg-blue-500 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-blue-600 duration-300 ">
+                                <i class="fab fa-facebook-f text-white"></i>
+                             </a>
+    
+                             <a target="_blank" href="https://linkedin.com/company/wepro" class="bg-cyan-600 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-cyan-700 duration-300 ">
+                               <i class="fab fa-linkedin-in text-white"></i>
+                            </a>
+                             <a target="_blank" href="https://tiktok.com/@wepro" class="bg-slate-800 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-slate-900 duration-300 ">
+                               <i class="fab fa-tiktok text-white"></i>
+                            </a>
+
+                           </div>
+                       </div>
+                       <!-- Apps end -->
+       
+       
+                   </article>
+                </section>
+           </article>
+           <!-- Scan End  -->
+
+        </section>
+        <!-- footer line end  -->
+
+
+        <!-- Social Media Platform start  -->
+         <section class="mt-5 md:mt-0 hidden xl:block">
+            <article class="flex md:gap-x-0 flex-col items-center">
+                <div class="">
+                   <div class="">
+                       <img class="w-24 xl:w-32" src="./assets/img/LocationQr.png" alt="Qr Code for location!">
+                   </div>
+                   <p class="text-base mx-auto md:mx-0 text-center md:text-xl xl:text-2xl text-blue-900 ">
+                       Location
+                   </p>
+                </div>
+
+                <!-- Apps start  -->
+                <div class="mt-5">
+                    <div class="flex items-center gap-x-2">
+                        <a target="_blank" href="https://facebook.com/wepro" class="bg-blue-500 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-blue-600 duration-300 ">
+                            <i class="fab fa-facebook-f text-white"></i>
+                         </a>
+
+                         <a target="_blank" href="https://linkedin.com/company/wepro" class="bg-cyan-600 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-cyan-700 duration-300 ">
+                           <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+
+                         <a target="_blank" href="https://tiktok.com/@wepro" class="bg-slate-800 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-slate-900 duration-300 ">
+                           <i class="fab fa-tiktok text-white"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Apps end -->
+
+
+            </article>
+         </section>
+        <!-- Social Media Platform end  -->
+
+        
+
+    </footer>
+    <!-- footer end -->
+
+    
+
+    <div class="">
+        <div class="hidden xl:hidden lg:flex justify-end mt-5 items-center gap-x-2 px-5 ">
+            <a target="_blank" href="https://www.facebook.com/share/14UaD6QRfJ/" class="bg-blue-500 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-blue-600 duration-300 ">
+                <i class="fab fa-facebook-f text-white"></i>
+             </a>
+
+
+             <a target="_blank" href="https://www.linkedin.com/company/yecceducation" class="bg-cyan-600 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-cyan-700 duration-300 ">
+               <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+
+             <a target="_blank" href="https://www.tiktok.com/@yeccedu" class="bg-slate-800 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-slate-900 duration-300 ">
+               <i class="fab fa-tiktok text-white"></i>
+            </a>
+
+        </div>
+    </div>
+
+
+     <!-- Sub footer start  -->
+     <section class="bg-blue-700 text-slate-100 py-4 md:py-2 mt-10">
+        <h1 class="text-center text-white text-slate-800">© 2025 We Pro. All rights reserved.</h1>
+     </section>
+    <!-- Sub footer end -->
+
 </body>
+<script src="./nav.js"></script>
 </html>
