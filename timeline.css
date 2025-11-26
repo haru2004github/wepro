@@ -25,11 +25,12 @@
             background-color: #3b82f6; 
             height: 100%;
             transform: none;
+            display:none
         }
 
         .timeline-item {
-            margin-left: 2rem; /* Push content away from line */
-            width: calc(100% - 2rem);
+            /* margin-left: 2rem; Push content away from line */
+            /* width: calc(100% - 2rem); */
             margin-bottom: 2rem;
             position: relative;
             text-align: left;
