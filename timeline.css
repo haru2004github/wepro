@@ -33,6 +33,7 @@
             /* width: calc(100% - 2rem); */
             margin-bottom: 2rem;
             position: relative;
+
             text-align: left;
             flex: none;
             padding-top: 0;
@@ -97,6 +98,7 @@
                 display: block; 
                 padding-top: 2rem;
                 padding-bottom: 2rem;
+                
                 max-width: 90%; /* Center the timeline */
             }
 
@@ -104,6 +106,7 @@
             .timeline-container:before {
                 left: 50%;
                 width: 6px; 
+                display:block;
                 background-color: #d1d5db; /* Light gray line */
                 transform: translateX(-50%);
             }
@@ -143,6 +146,7 @@
                 border: none;
                 position: relative;
                 min-height: 120px;
+                border : 1px solid #0000
             }
             
             /* Year positioned as a large label centered on the dot */
