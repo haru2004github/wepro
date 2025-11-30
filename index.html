@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" xintegrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="timeline.css">
     <link rel="icon" href="./assets/img/bullet.png">
 
@@ -146,6 +146,7 @@
 
     <!-- Hero Section -->
     <main id="home" class="lg:container md:mx-auto px-6 py-16 md:py-24">
+        <!-- Mobile/Tablet View -->
         <div class="grid md:gap-12 items-center lg:hidden">
             <!-- Right Column: Image -->
             <div class="">
@@ -156,10 +157,12 @@
 
             <!-- Left Column: Content -->
             <div class="text-center md:text-left">
-                <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
-                    The Only Way to Stop a Hacker is to Think Like One.
+                <!-- Added ID for JavaScript targeting -->
+                <h1 id="hero-title-mobile" class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight transition-opacity duration-1000">
+                    The Only Way to <br> Stop a Hacker is to <br> Think Like One.
                 </h1>
-                <p class="mt-6 text-lg text-gray-600">
+                <!-- Added ID for JavaScript targeting -->
+                <p id="hero-subtitle-mobile" class="mt-6 text-lg text-gray-600 transition-opacity duration-1000">
                      To defend systems, security must adopt the hacker mindset—anticipate methods to proactively find and patch vulnerabilities.
                 </p>
                 <div class="mt-8 flex justify-center md:justify-start gap-4 text-sm md:text-base">
@@ -171,19 +174,18 @@
                     </button>
                 </div>
             </div>
-
-            
-            
-            
         </div>
 
+         <!-- Desktop View -->
          <div class="hidden lg:grid md:grid-cols-2 gap-12 items-center ">
              <!-- Left Column: Content -->
             <div class="text-center md:text-left">
-                <h1 class="text-3xl md:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-                    The Only Way to Stop a Hacker is to Think Like One.
+                 <!-- Added ID for JavaScript targeting -->
+                <h1 id="hero-title-desktop" class="text-3xl md:text-4xl md:text-5xl font-bold text-gray-800 leading-tight transition-opacity duration-1000">
+                   The Only Way to <br> Stop a Hacker is to <br> Think Like One.
                 </h1>
-                <p class="mt-6 text-lg text-gray-600">
+                <!-- Added ID for JavaScript targeting -->
+                <p id="hero-subtitle-desktop" class="mt-6 text-lg text-gray-600 transition-opacity duration-1000">
                    To defend systems, security must adopt the hacker mindset—anticipate methods to proactively find and patch vulnerabilities.
                 </p>
                 <div class="mt-8 flex justify-center md:justify-start gap-4">
@@ -933,7 +935,7 @@
 
      <!-- Sub footer start  -->
      <section class="bg-[#ff7316] text-slate-100 py-4 md:py-2 mt-10">
-        <h1 class="text-center font-bold text-slate-800">© 2025 WePro. All rights reserved.</h1>
+        <h1 class="text-center font-bold text-slate-800">© 2025 wePro. All rights reserved.</h1>
      </section>
     <!-- Sub footer end -->
 
@@ -943,4 +945,65 @@
 
 </body>
 <script src="./nav.js"></script>
+<script>
+    // --- Hero Text Alternation Script ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const titleElements = [
+            document.getElementById('hero-title-mobile'),
+            document.getElementById('hero-title-desktop')
+        ];
+        const subtitleElements = [
+            document.getElementById('hero-subtitle-mobile'),
+            document.getElementById('hero-subtitle-desktop')
+        ];
+
+        // 1. Define the pairs of content
+        const contentPairs = [
+            {
+                title: "The Only Way to <br> Stop a Hacker is to <br> Think Like One.",
+                subtitle: "To defend systems, security must adopt the hacker mindset—anticipate methods to proactively find and patch vulnerabilities."
+            },
+            {
+                // Note: The new title is three lines, so we use <br> for line breaks in the HTML.
+                title: "Global Vision<br>Local Strength<br>Secure Innovation",
+                subtitle: "Our philosophy is to combine world-class expertise with focused, localized strategies to drive innovation securely."
+            }
+        ];
+
+        let currentIndex = 0;
+        const delay = 5000; // 5 seconds
+
+        function updateHeroText() {
+            // Get the content for the current index
+            const currentContent = contentPairs[currentIndex];
+            const nextIndex = (currentIndex + 1) % contentPairs.length;
+            const nextContent = contentPairs[nextIndex];
+
+            // 2. Apply a fade-out effect by setting opacity to 0
+            titleElements.forEach(el => el.style.opacity = '0');
+            subtitleElements.forEach(el => el.style.opacity = '0');
+
+            // 3. Wait for the fade-out duration (e.g., 500ms, which is set by Tailwind's duration-500 class used on the elements)
+            setTimeout(() => {
+                // 4. Update the content
+                titleElements.forEach(el => el.innerHTML = nextContent.title);
+                subtitleElements.forEach(el => el.innerHTML = nextContent.subtitle);
+
+                // 5. Apply a fade-in effect by setting opacity back to 1
+                titleElements.forEach(el => el.style.opacity = '1');
+                subtitleElements.forEach(el => el.style.opacity = '1');
+
+                // 6. Move to the next index
+                currentIndex = nextIndex;
+            }, 500); // Match this timeout to the CSS transition duration
+        }
+
+        // Start the alternation loop
+        // The first update happens after the initial delay, as the default content is already loaded.
+        setInterval(updateHeroText, delay);
+    });
+
+    // --- Original nav.js content (if any) should be merged here if nav.js is not an actual file ---
+    // Since nav.js is a separate file, we will assume it works and keep the reference.
+</script>
 </html>
