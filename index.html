@@ -56,6 +56,58 @@ Cybersecurity Myanmar, penetration testing, vulnerability assessment, red team, 
              font-family: "Poppins", sans-serif
         }
 
+            .pro-card-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem; /* rounded-2xl */
+        background-color: #131A2B;
+    }
+    
+    .pro-card-wrapper::before {
+        content: "";
+        position: absolute;
+        /* အလင်းတန်းကို ဘေးတိုက်ပြေးစေရန် linear-gradient သုံးထားပြီး အကျယ်ကို ပိုချဲ့ထားသည် */
+        top: 0;
+        left: -150%; /* ဘယ်ဘက်အပြင်ဘက်မှ စတင်မည် */
+        width: 400%; /* ကတ်ပြားထက် ပိုကျယ်အောင် လုပ်ထားသည် */
+        height: 100%;
+        /* Pro-level light beam: ဘေးတိုက်ပြေးမည့် အလင်းတန်း */
+        background: linear-gradient(
+            90deg,
+            transparent 25%,
+            #2563eb 45%, /* Deep blue */
+            #60a5fa 50%, /* Bright blue */
+            #ffffff 55%, /* White tip */
+            #2563eb 65%, /* Deep blue */
+            transparent 85%
+        );
+        /* Animation အသစ်: ပိုသွက်သွားအောင် အချိန်ကို 0.6s သို့ လျှော့ချထားသည် */
+        animation: pro-swipe 0.6s ease-in-out infinite alternate;
+        opacity: 0;
+        /* ထိလိုက်တာနဲ့ ချက်ချင်းပေါ်လာစေရန် 0.1s သို့ ပြောင်းထားသည် */
+        transition: opacity 0.1s ease;
+    }
+    
+    .group:hover .pro-card-wrapper::before {
+        opacity: 1;
+    }
+    
+    /* Keyframes အသစ်: ဘယ်မှ ညာသို့ ရွေ့လျားခြင်း */
+    @keyframes pro-swipe {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(50%); } /* ညာဘက်သို့ ရွေ့မည် */
+    }
+    
+    /* Inner dark background to mask the center, leaving only the border visible */
+    .pro-card-inner {
+        position: absolute;
+        inset: 1.5px;
+        background-color: #131A2B;
+        border-radius: inherit;
+        z-index: 10;
+        transition: background-color 0.15s ease;
+    }
+
         /* navbar toggle start  */
 .one.active{ 
     transform-origin: left!important;
@@ -265,7 +317,7 @@ Cybersecurity Myanmar, penetration testing, vulnerability assessment, red team, 
             <!-- Palo Alto -->
             <div aria-label="Palo Alto Networks" class="group">
                 <div class="rounded-2xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm hover:shadow-md transition-all">
-                <img src="./assets/img/company/Parent-logo.png" alt="Palo Alto Networks Logo" loading="lazy"
+                <img src="./assets/img/company/wazuh.png" alt="Palo Alto Networks Logo" loading="lazy"
                     class="mx-auto h-10 md:h-12 object-contain  opacity-80 group-hover:opacity-100 transition"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
                 <div class="hidden items-center justify-center h-10 md:h-12 text-sm font-semibold text-slate-700">
@@ -347,100 +399,165 @@ Cybersecurity Myanmar, penetration testing, vulnerability assessment, red team, 
 
      <!-- Partners Section -->
            <!-- Partners Section -->
-   <section id="partners" class="py-24 bg-gray-700 relative overflow-hidden">
-        
-    <!-- Subtle background decorative elements for a premium feel -->
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -z-10 mix-blend-screen pointer-events-none"></div>
-    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10 mix-blend-screen pointer-events-none"></div>
+  <section id="partners" class="py-24 relative overflow-hidden bg-slate-900 w-full">
+    
+    <!-- Background Tech/Glow Elements -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-800/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="w-full max-w-[1400px] mx-auto px-4 md:px-8 relative z-10">
         
-        <!-- Header -->
+        <!-- Header Section -->
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-sm font-semibold tracking-widest text-blue-400 uppercase mb-3">Our Network</h2>
-            <h3 class="text-3xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 pb-2">
+            <h2 class="text-sm font-bold tracking-widest text-blue-500 uppercase mb-4">Our Network</h2>
+            <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">
                 Trusted Partners
             </h3>
-            <p class="mt-4 text-lg text-gray-400 font-light leading-relaxed">
+            <!-- Orange separator line -->
+            <div class="w-12 h-1 bg-orange-500 mx-auto rounded-full mb-6"></div>
+            <p class="text-base md:text-lg text-slate-400 font-light leading-relaxed">
                 We collaborate with world-leading technology innovators to deliver secure, scalable, and premium digital solutions.
             </p>
         </div>
 
-        <!-- Logo Container (Using Flexbox to achieve the 5 top, 4 bottom centered layout) -->
-        <div class="flex flex-wrap justify-center gap-8 md:gap-12 lg:gap-14 items-center max-w-6xl mx-auto mt-10">
+        <div class="flex flex-col gap-8 md:gap-12 items-center mt-8 w-full">
             
-            <!-- Partner 1: Mr Linuxer -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(59,130,246,0.4)] ring-1 ring-white/10 group-hover:ring-blue-400/60 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-6 flex justify-center items-center">
-                    <img class="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/Mr Linuxer Logo..png" alt="Mr Linuxer">
+            <!-- ====== Local Partners Section ====== -->
+            <div class="w-full flex flex-col items-center">
+                <!-- Section Title -->
+                <div class="w-full max-w-4xl flex items-center justify-center mb-8 opacity-90">
+                    <div class="h-[1px] bg-gradient-to-r from-transparent to-slate-700/80 flex-1"></div>
+                    <h4 class="text-sm md:text-base text-slate-300 font-semibold px-6 tracking-[0.2em] uppercase">Local Partners</h4>
+                    <div class="h-[1px] bg-gradient-to-l from-transparent to-slate-700/80 flex-1"></div>
+                </div>
+
+                <!-- Row 1: Local Partners (5 Items) -->
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 w-full">
+                    
+                    <!-- Partner 1 -->
+                    <!-- duration-300 ကို duration-150 သို့ ပြောင်း၍ ပိုသွက်စေသည် -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/Mr Linuxer Logo..png" alt="Local Partner 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 2 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/gtl.png" alt="Local Partner 2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 3 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain rounded-xl transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/royal smart myanmar.png" alt="Local Partner 3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 4 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/goldenpride.png" alt="Local Partner 4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 5 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/NetrixMyanmar.png" alt="Local Partner 5">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Partner 2: GTL (White bg variant) -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(255,255,255,0.5)] ring-1 ring-white/20 group-hover:ring-white transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/gtl.png" alt="GTL">
+            <div class="w-full flex flex-col items-center mt-6">
+                <!-- Section Title -->
+                <div class="w-full max-w-4xl flex items-center justify-center mb-8 opacity-90">
+                    <div class="h-[1px] bg-gradient-to-r from-transparent to-slate-700/80 flex-1"></div>
+                    <h4 class="text-sm md:text-base text-slate-300 font-semibold px-6 tracking-[0.2em] uppercase text-center">International Partners</h4>
+                    <div class="h-[1px] bg-gradient-to-l from-transparent to-slate-700/80 flex-1"></div>
+                </div>
+
+                <!-- Row 2: International Partners (4 Items) -->
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 w-full">
+                    
+                    <!-- Partner 6 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/Dr._Web-Logo.wine.png" alt="International Partner 1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 7 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/Bitdefender.png" alt="International Partner 2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 8 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/Webo.Fortinet.png" alt="International Partner 3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner 9 -->
+                    <div class="group w-36 h-32 sm:w-48 sm:h-40 shadow-lg hover:shadow-blue-500/20 transition-all duration-150 hover:-translate-y-2 cursor-pointer">
+                        <div class="pro-card-wrapper w-full h-full border border-slate-700/50 group-hover:border-transparent transition-colors duration-150">
+                            <div class="pro-card-inner"></div>
+                            <div class="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent z-20 group-hover:opacity-0 transition-opacity duration-150"></div>
+                            
+                            <div class="relative z-20 w-full h-full p-6 flex justify-center items-center">
+                                <img class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-150 group-hover:scale-105" src="./assets/img/partners/palo-alto-firewall-logo.png" alt="International Partner 4">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <!-- Partner 3: Royal Smart Myanmar (Full image variant) -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(156,163,175,0.5)] ring-1 ring-white/10 group-hover:ring-gray-300/60 transition-all duration-500">
-                     <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/royal smart myanmar.jpg" alt="Royal Smart Myanmar">
-                </div>
-                 <div class="absolute inset-0 rounded-full ring-inset ring-1 ring-black/30 pointer-events-none"></div>
-            </div>
-
-            <!-- Partner 4: Golden Pride -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-slate-800 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(234,179,8,0.3)] ring-1 ring-white/10 group-hover:ring-yellow-500/50 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/goldenpride.png" alt="Golden Pride">
-                </div>
-            </div>
-
-            <!-- Partner 5: Netrix Myanmar -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(59,130,246,0.4)] ring-1 ring-white/20 group-hover:ring-blue-400 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/NetrixMyanmar.png" alt="Netrix Myanmar">
-                </div>
-            </div>
-
-            <!-- Partner 6: Dr. Web -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(34,197,94,0.4)] ring-1 ring-white/20 group-hover:ring-green-400 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/Dr._Web-Logo.wine.png" alt="Dr. Web">
-                </div>
-            </div>
-
-            <!-- Partner 7: Bitdefender -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(239,68,68,0.4)] ring-1 ring-white/20 group-hover:ring-red-500 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/Bitdefender.png" alt="Bitdefender">
-                </div>
-            </div>
-
-            <!-- Partner 8: Fortinet -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(239,68,68,0.3)] ring-1 ring-white/10 group-hover:ring-red-500/60 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain filter transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/Webo.Fortinet.png" alt="Fortinet">
-                </div>
-            </div>
-
-            <!-- Partner 9: Palo Alto -->
-            <div class="group relative rounded-full w-36 h-36 lg:w-44 lg:h-44 flex justify-center items-center transition-all duration-500 hover:-translate-y-3 hover:scale-105 cursor-pointer z-10 flex-shrink-0">
-                <div class="absolute inset-0 rounded-full bg-white shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] group-hover:shadow-[0_0_35px_rgba(249,115,22,0.4)] ring-1 ring-white/20 group-hover:ring-orange-400 transition-all duration-500"></div>
-                <div class="relative w-full h-full p-8 flex justify-center items-center">
-                    <img class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" src="./assets/img/partners/palo-alto-firewall-logo.png" alt="Palo Alto">
-                </div>
-            </div>
-
         </div>
         
     </div>
