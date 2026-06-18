@@ -3,73 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wePro</title>
+    <title>wePro - Corporate Cybersecurity Services Inquiry</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./assets/img/bullet.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/img/bullet.png" onerror="this.onerror=null; this.src='https://placehold.co/32x32/1804fe/ffffff?text=W';">
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-     <style>
-
-        
+    <style>
         body {
-             font-family: "Poppins", sans-serif
+             font-family: "Poppins", sans-serif;
+             background-color: #F8FAFC; 
+             background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+             background-size: 40px 40px;
+        }
+        h1, h2, h3, h4 {
+             font-family: "Raleway", sans-serif;
         }
 
-        /* navbar toggle start  */
-.one.active{ 
-    transform-origin: left!important;
-    transform: rotate(40deg)!important;
+        /* Navbar toggle */
+        .one.active{ transform-origin: left!important; transform: rotate(40deg)!important; }
+        .two.active{ transform: translateX(-30px)!important; opacity: 0!important; }
+        .three.active{ transform-origin: left!important; transform: rotate(-40deg) !important; }
+        .navDisplay.active{ display: block !important; }
+        
+        /* Smooth Entrance Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
 
-    }
-    .two.active{
-        transform: translateX(-30px)!important;
-        opacity: 0!important;
-    }
-    .three.active{ 
-        transform-origin: left!important;
-        transform: rotate(-40deg) !important;
+        /* Premium Input Focus & Glow */
+        .premium-input {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+        .premium-input:focus {
+            outline: none;
+            background-color: #ffffff;
+            border-color: #1804fe; 
+            box-shadow: 0 10px 25px -5px rgba(24, 4, 254, 0.15);
+            transform: translateY(-2px);
+        }
 
-    }
-    .navDisplay.active{
-        display: block !important;
-    }
- /* navbar toggle end  */
+        /* Custom Checkbox - Premium Style */
+        .custom-checkbox {
+            appearance: none;
+            background-color: #F8FAFC;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.25em;
+            height: 1.25em;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 0.35em;
+            display: grid;
+            place-content: center;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .custom-checkbox::before {
+            content: "";
+            width: 0.7em;
+            height: 0.7em;
+            transform: scale(0);
+            transition: 120ms transform ease-in-out;
+            box-shadow: inset 1em 1em white;
+            background-color: white;
+            transform-origin: center;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        }
+        .custom-checkbox:hover {
+            border-color: #1804fe;
+            box-shadow: 0 0 0 4px rgba(24, 4, 254, 0.05);
+        }
+        .custom-checkbox:checked {
+            background-color: #dc2626; 
+            border-color: #dc2626;
+            box-shadow: 0 4px 10px rgba(220, 38, 38, 0.2);
+        }
+        .custom-checkbox:checked::before {
+            transform: scale(1);
+        }
+
+        /* Glassmorphism Panel */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+        }
     </style>
 </head>
-<body class="bg-[#F8FAFC]">
+<body class="text-slate-800">
 
-    
-    <!-- Header Section -->
-<!-- 
-    <div class="bg-gradient-to-r from-[#1804fe] to-red-600 text-white py-2 hidden lg:block">
-        <div class="mx-auto container px-10 flex justify-between ">
-            <h1 class="text-sm">
-            Vumetric is now part of the TELUS family! <a href="">Vumetric is now part of the TELUS family! Learn more →</a>
-        </h1>
-        <div class="flex gap-x-6 text-sm">
-            <div>
-                <i class="fas fa-phone"></i>
-                <a href="tel:09783390610">+09783390610</a>
-            </div>
-            <div class="">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:waiphyoaung@wepro.com.mm">infosec@wepro.com.mm</a>
-
-            </div>
-
-        </div>
-        </div>
-        
-    </div> -->
-
-    <header class="z-50 bg-slate-100 backdrop-blur-sm sticky top-0 z-50 shadow shadow-lg md:shadow-0">
+      <header class="z-50 bg-slate-100 backdrop-blur-sm sticky top-0 z-50 shadow shadow-lg md:shadow-0">
         <nav class="max-w-7xl xl:container mx-auto px-6 py-2">
             <div class="flex items-center justify-between ">
                 <!-- Logo -->
@@ -151,112 +189,312 @@
         </nav>
     </header>
 
-    <!-- Contact Section Content (Redesigned) -->
-    <main class="container mx-auto px-4 sm:px-6 py-16 lg:py-24">
-        <div class="max-w-4xl mx-auto text-center mb-16">
-            <div class="mb-12 text-center">
-                <h2 class="text-5xl md:text-6xl font-extrabold tracking-tighter leading-none">
-                    <span class="text-red-600 uppercase">Your Secrets </span>
-                    <span class="text-[#1804fe] uppercase"> Are Safe Here</span>
-                </h2>
-            </div>
-            <p class="text-xl text-gray-500 mt-4 max-w-2xl mx-auto">
-                We're always excited to discuss new projects. Reach out and let's start a conversation.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+    <main class="container mx-auto px-4 py-12 lg:py-16">
+        
+        <!-- Premium Form Container -->
+        <div class="max-w-4xl mx-auto glass-panel rounded-2xl overflow-hidden mb-12 animate-fade-in-up">
             
-            <!-- SWAPPED: Contact Details Stack (Now Left, lg:col-span-1) -->
-            <div class="lg:col-span-1 bg-[#ff7316] text-slate-900 p-8 rounded-2xl shadow-2xl space-y-8">
+            <!-- Hero Header with Mesh Gradient Look -->
+            <div class="bg-gradient-to-br from-[#001E3C] via-[#051124] to-[#0a1128] px-8 md:px-12 py-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+                <!-- Abstract Premium Glows -->
+                <div class="absolute -top-20 -right-20 w-72 h-72 bg-[#1804fe] rounded-full blur-[100px] opacity-40 mix-blend-screen pointer-events-none"></div>
+                <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-[#dc2626] rounded-full blur-[100px] opacity-30 mix-blend-screen pointer-events-none"></div>
                 
-                <!-- Title color changed to bright blue -->
-                <h3 class="text-2xl font-extrabold text-slate-100 mb-6">Contact Channels</h3>
-                
-                <!-- Card 1: Email -->
-                <div class="pb-6 border-b border-slate-400">
-                    <!-- Icon color changed to bright blue -->
-                    <i class="fas fa-envelope text-3xl text-slate-100 mb-3"></i>
-                    <p class="text-lg font-semibold text-white mb-1">General Inquiries</p>
-                    <a href="mailto:infosec@wepro.com.mm" class="text-sm text-gray-300 hover:text-sky-400 transition duration-300 block">infosec@wepro.com.mm</a>
+                <div class="relative z-10 w-full md:w-2/3 text-center md:text-left">
+                    <div class="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-[#ff7316] text-[11px] font-bold tracking-widest uppercase mb-4 shadow-sm">
+                        Enterprise Solutions
+                    </div>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 tracking-tight leading-tight">
+                        Cybersecurity <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#1804fe]">Inquiry</span>
+                    </h1>
+                    <p class="text-slate-300 font-medium text-sm md:text-base max-w-lg leading-relaxed">
+                        Protecting Your Digital Assets with Confidence. Let our experts secure your infrastructure.
+                    </p>
                 </div>
-
-                <!-- Card 2: Phone -->
-                <div class="pb-6 border-b border-slate-400">
-                    <!-- Icon color changed to bright blue -->
-                    <i class="fas fa-headset text-3xl text-slate-100 mb-3"></i>
-                    <p class="text-lg font-semibold text-white mb-1">Call Our Team</p>
-                    <a href="tel:09783390610" class="text-sm text-gray-300 hover:text-sky-400 transition duration-300 block">09783390610</a>
-
-                </div>
-
-                <!-- Card 3: Website & Socials -->
-                <div>
-                    <!-- Icon color changed to bright blue -->
-                    <i class="fas fa-link text-3xl text-slate-100 mb-4"></i>
-                    <p class="text-lg font-semibold text-white mb-3">Online Presence</p>
-                    
-
-                    <!-- Social Media Links: Facebook, LinkedIn, TikTok -->
-                    <div class="flex space-x-6 pb-6 border-b border-slate-400">
-                        <a href="https://www.facebook.com/weprosec/" target="_blank" class="text-gray-100 hover:text-white transition duration-300 transform hover:scale-125" aria-label="Facebook">
-                            <i class="fab fa-facebook-f text-2xl"></i>
-                        </a>
-                        <a href="https://linkedin.com/company/wepro" target="_blank" class="text-gray-100 hover:text-white transition duration-300 transform hover:scale-125" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in text-2xl"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@gtone.mm" target="_blank" class="text-gray-100 hover:text-white transition duration-300 transform hover:scale-125" aria-label="TikTok">
-                            <i class="fab fa-tiktok text-2xl"></i>
-                        </a>
+                <div class="relative z-10 w-full md:w-1/3 flex justify-center md:justify-end">
+                    <div class="p-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <img src="./assets/img/weprologo.png" class="h-12 md:h-16 brightness-0 invert opacity-95 drop-shadow-lg" alt="wePro Logo" onerror="this.onerror=null; this.src='https://placehold.co/120x40/ffffff/004182?text=wePro';">
                     </div>
                 </div>
             </div>
 
-            <!-- SWAPPED: Address/Map Card (Now Right, lg:col-span-2) -->
-            <div id="map" class="lg:col-span-3 bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 w-full h-full">
-                <div class="map-container rounded-t-2xl w-full">
-                    <!-- Embedded Google Map. Centered on Hlaing Township, Yangon. -->
-                    <iframe class="w-full min-h-[500px]" 
-                        title="WePro Office Location Map"
+            <!-- Intro Text -->
+            <div class="px-8 md:px-12 pt-10 pb-6 border-b border-slate-100">
+                <p class="text-[16px] font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <i class="fas fa-handshake text-[#ff7316]"></i> Thank you for your interest in wePro's Services.
+                </p>
+                <p class="text-[14px] text-slate-600 mb-4 leading-relaxed font-medium">
+                    Whether your organization requires Penetration Testing, Vulnerability Assessment, Security Audit, Compliance Assessment, Security Awareness Training, Incident Response, or other cybersecurity consulting services, our experienced security professionals are ready to assist.
+                </p>
+                <div class="bg-gradient-to-r from-blue-50 to-transparent p-5 rounded-xl border-l-4 border-[#1804fe] mt-6">
+                    <p class="text-[13px] text-slate-700 font-medium leading-relaxed">
+                        Please complete the inquiry form below. Our cybersecurity consultants will review your requirements and contact you to discuss the project scope, technical requirements, service recommendations, and quotation details.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Success Message overlay -->
+            <div id="successMessage" class="hidden px-8 md:px-12 py-20 text-center">
+                <div class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(34,197,94,0.2)] border border-green-100">
+                    <i class="fas fa-check text-4xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">Inquiry Submitted Successfully!</h3>
+                <p class="text-base text-slate-600 mb-8 max-w-md mx-auto">Your details have been securely processed. Our cybersecurity team will reach out to you within 1-3 business days.</p>
+                <button onclick="window.location.reload()" class="bg-slate-900 text-white px-8 py-3 rounded-xl text-sm font-semibold hover:bg-[#1804fe] hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300">
+                    Submit Another Inquiry
+                </button>
+            </div>
+
+            <!-- The Form -->
+            <form id="inquiryForm" name="google-sheet-form" class="px-8 md:px-12 py-8 pb-12 space-y-10">
+                
+                <!-- Section 1: Contact Information -->
+                <div class="animate-fade-in-up delay-100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50/80 flex items-center justify-center text-[#1804fe] shadow-sm border border-blue-100">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">Contact Information</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+                        <div class="group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Full Name <span class="text-[#dc2626]">*</span></label>
+                            <input type="text" name="FullName" required class="w-full px-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter full name">
+                        </div>
+                        <div class="group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Organization / Company <span class="text-[#dc2626]">*</span></label>
+                            <input type="text" name="Organization" required class="w-full px-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter organization or company">
+                        </div>
+                        <div class="md:col-span-2 group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Job Title / Position <span class="text-[#dc2626]">*</span></label>
+                            <input type="text" name="JobTitle" required class="w-full px-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter job title or position">
+                        </div>
+                        <div class="group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Email Address <span class="text-[#dc2626]">*</span></label>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-4 top-3.5 text-slate-400 group-hover:text-[#1804fe] transition-colors pointer-events-none z-10"></i>
+                                <input type="email" name="Email" required class="w-full pl-11 pr-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter email address">
+                            </div>
+                        </div>
+                        <div class="group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Phone Number <span class="text-[#dc2626]">*</span></label>
+                            <div class="relative">
+                                <i class="fas fa-phone-alt absolute left-4 top-3.5 text-slate-400 group-hover:text-[#1804fe] transition-colors pointer-events-none z-10"></i>
+                                <input type="tel" name="Phone" required class="w-full pl-11 pr-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter phone number">
+                            </div>
+                        </div>
+                        <div class="group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Viber Number <span class="text-slate-400 font-normal lowercase tracking-normal">(Optional)</span></label>
+                            <div class="relative">
+                                <i class="fab fa-viber absolute left-4 top-3.5 text-slate-400 group-hover:text-[#1804fe] transition-colors pointer-events-none z-10"></i>
+                                <input type="tel" name="Viber" class="w-full pl-11 pr-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter Viber number">
+                            </div>
+                        </div>
+                        <div class="group">
+                            <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wide group-hover:text-[#1804fe] transition-colors">Telegram <span class="text-slate-400 font-normal lowercase tracking-normal">(Optional)</span></label>
+                            <div class="relative">
+                                <i class="fab fa-telegram-plane absolute left-4 top-3.5 text-slate-400 group-hover:text-[#1804fe] transition-colors pointer-events-none z-10"></i>
+                                <input type="text" name="Telegram" class="w-full pl-11 pr-4 py-3 rounded-xl text-slate-900 premium-input text-sm" placeholder="Enter Telegram username or number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-px bg-slate-100 animate-fade-in-up delay-200"></div>
+
+                <!-- Section 2: Requested Services -->
+                <div class="animate-fade-in-up delay-200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-xl bg-red-50/80 flex items-center justify-center text-[#dc2626] shadow-sm border border-red-100">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">Requested Service(s)</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+                        <label class="flex items-start gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Penetration Testing" class="mt-0.5 custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] leading-snug transition-colors">Penetration Testing <br><span class="text-[11px] font-medium text-slate-500 uppercase tracking-wider block mt-1">Web • Mobile • API • Network</span></span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Vulnerability Assessment" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Vulnerability Assessment</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Security Audit & Compliance Assessment" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Security Audit & Compliance</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Source Code Security Review" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Source Code Security Review</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Security Awareness Training" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Security Awareness Training</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Digital Forensics & Incident Response" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Digital Forensics & Incident Response</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Security Architecture Review" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Security Architecture Review</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Managed Security Services" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Managed Security Services</span>
+                        </label>
+                        <label class="flex items-center gap-3.5 cursor-pointer group p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                            <input type="checkbox" name="services" value="Cybersecurity Consulting" class="custom-checkbox shrink-0">
+                            <span class="text-sm text-slate-700 font-semibold group-hover:text-[#001E3C] transition-colors">Cybersecurity Consulting</span>
+                        </label>
+                        
+                        <!-- Other Option -->
+                        <div class="flex items-center gap-3.5 p-3.5 bg-white border border-slate-200 hover:border-[#dc2626]/50 hover:shadow-md rounded-xl transition-all duration-300 md:col-span-2 group">
+                            <input type="checkbox" id="otherCheck" class="custom-checkbox shrink-0">
+                            <div class="w-full flex items-center gap-3">
+                                <label for="otherCheck" class="text-sm font-semibold text-slate-700 group-hover:text-[#001E3C] whitespace-nowrap transition-colors">Other Services:</label>
+                                <input type="text" id="otherInput" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-900 text-sm focus:bg-white focus:outline-none focus:border-[#1804fe] focus:ring-2 focus:ring-[#1804fe]/20 transition-all" placeholder="Please specify...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full h-px bg-slate-100 animate-fade-in-up delay-300"></div>
+
+                <!-- Section 3: Additional Remarks -->
+                <div class="animate-fade-in-up delay-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-orange-50/80 flex items-center justify-center text-[#ff7316] shadow-sm border border-orange-100">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900 tracking-tight">Additional Remarks</h3>
+                    </div>
+                    <textarea name="Remarks" rows="4" class="w-full px-5 py-4 rounded-xl text-slate-900 premium-input text-sm resize-none" placeholder="Briefly describe your environment, specific concerns, or any other details you'd like us to know..."></textarea>
+                </div>
+
+                <!-- Privacy Notice & Submit Section -->
+                <div class="pt-6 border-t border-slate-100 animate-fade-in-up delay-300">
+                    <div class="bg-slate-50 p-5 rounded-xl mb-8 border border-slate-200 flex items-start gap-4">
+                        <i class="fas fa-lock text-[#1804fe] text-lg mt-0.5"></i>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900 mb-1">Privacy Notice</h4>
+                            <p class="text-[13px] text-slate-500 font-medium leading-relaxed">
+                                All information submitted through this inquiry form will be treated as strictly confidential and used solely for the purpose of evaluating and responding to your service request.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <button type="submit" id="submitBtn" class="group relative overflow-hidden w-full sm:w-auto min-w-[280px] bg-slate-900 text-white font-bold text-base py-4 px-10 rounded-xl shadow-[0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_30px_rgba(24,4,254,0.3)] transition-all duration-300 transform hover:-translate-y-1 outline-none">
+                            <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-[#1804fe] to-[#3625ff] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <span class="relative z-10 flex items-center justify-center gap-3">
+                                Submit Your Inquiry
+                                <i class="fas fa-arrow-right text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="mt-12 text-center space-y-2">
+                        <p class="text-[15px] font-bold text-slate-800 max-w-2xl mx-auto">
+                            Let wePro help safeguard your organization against evolving cyber threats while you focus on your core business operations.
+                        </p>
+                        <p class="text-[14px] text-slate-500 font-medium max-w-2xl mx-auto">
+                            Submit your inquiry today, and one of our specialists will contact you within 1–3 business days.
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Premium Orange "Get in Touch" Card -->
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-[#ff7316] to-[#ea580c] rounded-xl shadow-xl p-8 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden text-white animate-fade-in-up delay-100">
+            <!-- Decorative Accent -->
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
+
+            <!-- Left: Title -->
+            <div class="text-center md:text-left border-b md:border-b-0 md:border-r border-white/20 pb-5 md:pb-0 md:pr-10 w-full md:w-auto relative z-10">
+                <h3 class="text-2xl font-bold mb-1">Get in Touch</h3>
+                <p class="text-sm text-white/90 font-medium tracking-wide uppercase">We're here to help</p>
+            </div>
+            
+            <!-- Middle: Contacts -->
+            <div class="flex flex-col sm:flex-row gap-6 md:gap-10 w-full md:w-auto justify-center relative z-10">
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shadow-inner">
+                        <i class="fas fa-envelope text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] text-white/80 uppercase tracking-wider mb-0.5 font-bold">Email Us</p>
+                        <a href="mailto:infosec@wepro.com.mm" class="text-[15px] font-semibold text-white hover:text-[#001E3C] transition-colors">infosec@wepro.com.mm</a>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white shadow-inner">
+                        <i class="fas fa-phone-alt text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-[11px] text-white/80 uppercase tracking-wider mb-0.5 font-bold">Call Us</p>
+                        <a href="tel:09783390610" class="text-[15px] font-semibold text-white hover:text-[#001E3C] transition-colors">09783390610</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Socials -->
+            <div class="flex items-center gap-3 pt-5 md:pt-0 border-t md:border-t-0 md:border-l border-white/20 md:pl-10 w-full md:w-auto justify-center relative z-10">
+                <a href="https://www.facebook.com/weprosec/" target="_blank" class="w-10 h-10 rounded-full bg-white text-[#ff7316] flex items-center justify-center hover:bg-[#001E3C] hover:text-white transition-all duration-300 shadow-md"><i class="fab fa-facebook-f text-sm"></i></a>
+                <a href="https://linkedin.com/company/wepro" target="_blank" class="w-10 h-10 rounded-full bg-white text-[#ff7316] flex items-center justify-center hover:bg-[#001E3C] hover:text-white transition-all duration-300 shadow-md"><i class="fab fa-linkedin-in text-sm"></i></a>
+                <a href="https://www.tiktok.com/@gtone.mm" target="_blank" class="w-10 h-10 rounded-full bg-white text-[#ff7316] flex items-center justify-center hover:bg-[#001E3C] hover:text-white transition-all duration-300 shadow-md"><i class="fab fa-tiktok text-sm"></i></a>
+            </div>
+        </div>
+
+        <!-- Maps Area (Split into 2 Columns) -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up delay-200">
+            
+            <!-- Yangon Map Card -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+                <div class="p-5 border-b border-slate-100 bg-slate-50/50">
+                    <h3 class="text-base font-bold text-[#1804fe] mb-1.5 flex items-center gap-2">
+                        <i class="fas fa-building text-[#1804fe]/80"></i> Yangon (HQ)
+                    </h3>
+                    <address class="text-slate-600 text-[13px] not-italic leading-relaxed pr-2">
+                        No. 27/B, 7th Fl, Moe Myint San Condo, Ywar Ma Kyaung St, 1st Qtr, Hlaing Twp, Yangon.
+                    </address>
+                </div>
+                <div class="w-full h-56 relative bg-slate-100">
+                    <iframe class="absolute inset-0 w-full h-full" 
+                        title="WePro Yangon Location Map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d293.6858677933629!2d96.12508863277347!3d16.833864449323887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c19500314e68e9%3A0xab9d7d1db99f56cd!2swePro%20%7C%20Active%20Cyber%20Defense%20Center!5e1!3m2!1sen!2smm!4v1764115477390!5m2!1sen!2smm%22" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0" 
-                        allowfullscreen="" 
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
+                        frameborder="0" scrolling="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-                <div class="p-8 h-auto grid md:grid-cols-2">
-                    <div class="border-b-4 md:border-b-0 md:border-r-4 border-[#ff7316] pb-4 md:pb-0">
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Head Office (Yangon)</h3>
-                        <address class="text-gray-600 not-italic leading-relaxed">
-                            NO. (27/B), 7<sup>th</sup> FLOOR, MOE MYINT SAN CONDO,<br> YWAR MA KYAUNG STREET, <br class="md:hidden"> 1<sup>ST</sup> QUARTER,  HLAING TOWNSHIP, YANGON REGION, MYANMAR.
-                        </address>
-                    </div>
-                    
+            </div>
 
-                    <div class="lg:pl-10 mt-6 md:mt-0">
-                        <h3 class="text-2xl font-bold text-slate-800 mb-2 ">Office (Naypyidaw)</h3>
-                        <address class="text-gray-600 not-italic leading-relaxed ">
-                            NO. (23819), THITSAR 2<sup>nd</sup> STREET, MINGALAR DI PA QUARTER, <br> Pobba Thiri Township, NAYPYIDAW REGION, MYANMAR.
-                        </address>
-                    </div>
-
-                    
-
+            <!-- Naypyidaw Map Card -->
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+                <div class="p-5 border-b border-slate-100 bg-slate-50/50">
+                    <h3 class="text-base font-bold text-[#dc2626] mb-1.5 flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-[#dc2626]/80"></i> Naypyidaw Branch
+                    </h3>
+                    <address class="text-slate-600 text-[13px] not-italic leading-relaxed pr-2">
+                        No. 23819, Thitsar 2nd St, Mingalar Di Pa Qtr, Pobba Thiri Twp, Naypyidaw.
+                    </address>
+                </div>
+                <div class="w-full h-56 relative bg-slate-100">
+                    <iframe class="absolute inset-0 w-full h-full" 
+                        title="WePro Naypyidaw Location Map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119864.71765275039!2d96.0336264!3d19.7490059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c8b63e8093db27%3A0xcdaaa3683f81e3a4!2sNaypyidaw!5e0!3m2!1sen!2smm!4v1700000000000!5m2!1sen!2smm" 
+                        frameborder="0" scrolling="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-            <!-- END SWAPPED: Address/Map Card -->
 
         </div>
+        
     </main>
 
-     <div class="border border-slate-300"></div>
-
-
-        <!-- footer start  -->
+    <!-- footer start  -->
    <footer class="  container mx-auto md:flex justify-between items-start mt-5 md:mt-10  px-5 ">
  
         <!-- Logo start  -->
@@ -384,7 +622,7 @@
             </article>
             <!-- Service end  -->
 
-           
+            
 
             <!-- Knowledge start  -->
             <article class="">
@@ -483,7 +721,7 @@
                <section class="">
                    <article class="flex md:gap-x-0 items-center justify-center">
                        
-       
+        
                        <!-- Apps start  -->
                        <div class="md:mt-5">
                            <div class="flex items-center gap-x-2">
@@ -501,8 +739,8 @@
                            </div>
                        </div>
                        <!-- Apps end -->
-       
-       
+        
+        
                    </article>
                 </section>
            </article>
@@ -581,9 +819,80 @@
      </section>
     <!-- Sub footer end -->
 
+    <script>
+        // --- Navbar Toggle ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const navIcon = document.querySelector('.navIcon');
+            const aside = document.getElementById('aside');
+            const one = document.querySelector('.one');
+            const two = document.querySelector('.two');
+            const three = document.querySelector('.three');
 
+            if(navIcon) {
+                navIcon.addEventListener('click', () => {
+                    one.classList.toggle('active');
+                    two.classList.toggle('active');
+                    three.classList.toggle('active');
+                    aside.classList.toggle('-translate-x-full');
+                });
+            }
+        });
 
+        // --- Google Sheets Integration ---
+        
+        // ⚠️ အရေးကြီး: သင်၏ Apps Script Web App URL အသစ်ကို ဤနေရာတွင် ထည့်ပါ။
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyGD-mdHILyJ6RVFnhsxcSFooeSCkvwPJxo6qMSP8uHdFDQJOsb3OO986hO_F0OcppPFQ/exec'; 
+        
+        const form = document.forms['google-sheet-form'];
+        const btn = document.getElementById('submitBtn');
+        const successMsg = document.getElementById('successMessage');
 
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // 1. Loading State
+            const originalBtnText = btn.innerHTML;
+            btn.innerHTML = '<span class="relative z-10 flex items-center justify-center gap-3"><i class="fas fa-circle-notch fa-spin"></i> Processing Securely...</span>';
+            btn.classList.add('opacity-90', 'cursor-not-allowed', 'scale-95');
+            btn.disabled = true;
+
+            // 2. Prepare Data
+            const formData = new FormData(form);
+            
+            // Checkbox များကို String တစ်ခုအဖြစ် ပြောင်းရန်
+            let selectedServices = Array.from(document.querySelectorAll('input[name="services"]:checked')).map(cb => cb.value);
+            const otherCheck = document.getElementById('otherCheck');
+            const otherInput = document.getElementById('otherInput');
+            
+            if(otherCheck.checked && otherInput.value.trim() !== "") {
+                selectedServices.push("Other: " + otherInput.value.trim());
+            }
+            
+            formData.set('Services', selectedServices.join(', '));
+
+            // 3. Send via Fetch API
+            fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+                .then(response => {
+                    // mode: 'no-cors' အသုံးပြုထားသဖြင့် response body ကို ဖတ်၍မရပါ။ Network error မတက်ပါက အောင်မြင်သည်ဟု မှတ်ယူပါမည်။
+                    form.style.opacity = '0';
+                    form.style.transform = 'translateY(20px)';
+                    form.style.transition = 'all 0.5s ease';
+                    setTimeout(() => {
+                        form.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                        successMsg.classList.add('animate-fade-in-up');
+                        window.scrollTo({top: form.parentElement.offsetTop - 100, behavior: 'smooth'});
+                    }, 500);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert("Submission failed. Please check your network and try again.");
+                    // Reset Button
+                    btn.innerHTML = originalBtnText;
+                    btn.classList.remove('opacity-90', 'cursor-not-allowed', 'scale-95');
+                    btn.disabled = false;
+                });
+        });
+    </script>
 </body>
-<script src="./nav.js"></script>
 </html>
