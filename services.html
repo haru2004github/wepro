@@ -48,108 +48,93 @@
     
     <!-- Header Section -->
 
-    <!-- <div class="bg-gradient-to-r from-[#1804fe] to-red-600 text-white py-2 hidden lg:block">
-        <div class="mx-auto container px-10 flex justify-between ">
-            <h1 class="text-sm">
-            Vumetric is now part of the TELUS family! <a href="">Vumetric is now part of the TELUS family! Learn more →</a>
-        </h1>
-        <div class="flex gap-x-6 text-sm">
-            <div>
-                <i class="fas fa-phone"></i>
-                <a href="tel:09942519059">+959 942519059</a>
-            </div>
-            <div class="">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:waiphyoaung@wepro.com.mm">waiphyoaung@wepro.com.mm</a>
-
-            </div>
-
-        </div>
-        </div>
+       <div class="sticky top-0 z-50 pt-3 px-3 sm:px-6 w-full transition-all duration-300" id="header-wrapper">
+    <header class="max-w-7xl mx-auto bg-white/85 backdrop-blur-xl border-t border-l border-r border-slate-200/60 border-b-[3px] border-b-[#ff7316] shadow-[0_10px_30px_rgb(0,0,0,0.08)] rounded-2xl relative transition-all duration-300">
         
-    </div> -->
+        <nav class="px-4 sm:px-6 py-2.5 flex items-center justify-between">
+            <a href="./index.html" class="flex items-center gap-2 group relative z-50">
+                <img src="./assets/img/weprologo.png" class="h-9 md:h-11 lg:h-12 transition-transform duration-300 group-hover:scale-105 drop-shadow-sm" alt="wePro Logo">
+            </a>
 
-    <header class="z-50 bg-slate-100 card backdrop-blur-sm sticky top-0 z-50 shadow shadow-lg md:shadow-0">
-        <nav class="max-w-7xl xl:container mx-auto px-6 py-2">
-            <div class="flex items-center justify-between ">
-                <!-- Logo -->
-                <a href="./index.html" class="flex items-center gap-2">
-                    <img src="./assets/img/weprologo.png" class="h-16" alt="">
+            <ul class="hidden lg:flex items-center space-x-1.5">
+                <li>
+                    <a href="./index.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">About</a>
+                </li>
+                <li>
+                    <a href="./services.html" class="px-4 py-2 rounded-full text-[14px] font-bold text-[#ff7316] bg-[#ff7316]/10 transition-all duration-300">Services</a>
+                </li>
+                <li>
+                    <a href="./office.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Office</a>
+                </li>
+                <li>
+                    <a href="./partners.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Partners</a>
+                </li>
+                <li>
+                    <a href="./knowledge.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Knowledge</a>
+                </li>
+                <li>
+                    <a href="./privacy.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Privacy Policy</a>
+                </li>
+            </ul>
+
+            <div class="hidden lg:block relative z-50">
+                <a href="./contact.html" class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-[#ff7316] to-[#dc2626] rounded-full overflow-hidden shadow-[0_4px_15px_rgba(255,115,22,0.35)] hover:shadow-[0_8px_25px_rgba(220,38,38,0.45)] transition-all duration-300 transform hover:-translate-y-0.5">
+                    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-20"></span>
+                    <span class="relative z-10 flex items-center gap-2">
+                        Contact Us <i class="fas fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </span>
                 </a>
+            </div>
 
-                <!-- Desktop Navigation Links -->
-                <aside id="aside" class="z-40 fixed  border border-t-0 border-l-0 border-b-0 border-r-slate-400/60 md:static top-0 left-0 bg-white md:bg-transparent md:border-none backdrop-blur-xl md:backdrop-blur-0 text-blue-800 w-56 md:w-auto h-screen md:h-auto z-50  duration-300 -translate-x-full md:translate-x-0">
-                    <div class="realtive md:static flex bg-transparent justify-center items-center h-full md:h-auto flex-col md:flex-row gap-y-4 md:gap-y-0 items-center md:space-x-8 ">
-                        <ul class="flex flex-col md:flex-row gap-y-4 md:gap-y-0 items-center md:space-x-2 lg:space-x-8 text-base ">
-                            <li class="bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
-                                <a href="./index.html" >Home</a>
-                            </li>
-
-                            <li class="bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
-                                <a href="./about.html">
-                                    About
-                                </a>
-                            </li>
-
-
-                            <li class="bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:border-red-600 px-2">
-                                <a href="./services.html">
-                                    Services
-                                </a>
-                            </li>
-
-                            <li class="bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
-                                <a href="./office.html">
-                                    Office
-                                </a>
-                            </li>
-
-
-                            
-                            <li class="hidden bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
-                                <a href="./careers.html">
-                                    Careers
-                                </a>
-                            </li>
-
-                            <li class="bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
-                                <a href="./knowledge.html">
-                                    Knowledges
-                                </a>
-                            </li>
-
-                            
-                            <li class="bg-[#ff7316] md:bg-transparent w-full text-center hover:bg-[#004182] duration-200 hover:text-white py-1 text-white rounded-lg md:text-slate-800 hover:text-red-600 duration-300 font-semibold  border-b-2 border-b-slate-100 md:hover:text-black md:hover:bg-transparent  md:hover:border-red-600 px-2">
-                                <a href="./privacy.html" class="whitespace-nowrap">
-                                  Privacy Policy 
-                                </a>
-                            </li>
-                            
-                            
-                            
-                            
-                        </ul>
-
-                        <div class="">
-                                <a class="bg-[#004182] text-white font-semibold py-2 px-3 rounded-md shadow-md hover:bg-[#ff7316] hover:text-slate-800 transition-all duration-300 transform hover:scale-105 block" href="./contact.html" >
-                                Contact us
-                            </a>
-                        </div>
+            <div class="lg:hidden z-50 relative">
+                <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center cursor-pointer border border-slate-200 hover:border-[#ff7316] hover:bg-[#ff7316]/5 transition-colors navIcon group">
+                    <div class="relative w-5 h-4 flex flex-col justify-between overflow-hidden">
+                        <span class="w-full h-[2.5px] bg-slate-800 group-hover:bg-[#ff7316] rounded-full transform transition-all duration-300 origin-left one"></span>
+                        <span class="w-full h-[2.5px] bg-slate-800 group-hover:bg-[#ff7316] rounded-full transition-all duration-300 two"></span>
+                        <span class="w-full h-[2.5px] bg-slate-800 group-hover:bg-[#ff7316] rounded-full transform transition-all duration-300 origin-left three"></span>
                     </div>
-                </aside>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                <div class="scale-90  w-8 h-6 navIcon  flex items-center cursor-pointer">
-                    <div class="absolute w-8 h-1 duration-500 top-0 bg-blue-600 rounded-full one "></div>
-                    <div class="absolute w-8 h-1 duration-500 bg-blue-600 rounded-full two"></div>
-                    <div class="absolute w-8 h-1 duration-500 bottom-0 bg-blue-600 rounded-full three"></div>
                 </div>
             </div>
-            </div>
-
+            
         </nav>
+
+        <div id="mobileMenu" class="absolute top-full left-0 right-0 mt-3 bg-white/95 backdrop-blur-xl border border-slate-200/60 rounded-2xl shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-out z-40 overflow-hidden">
+            <div class="p-4 flex flex-col gap-1.5 max-h-[80vh] overflow-y-auto custom-scrollbar">
+                <a href="./index.html" class="px-4 py-3 rounded-xl text-[15px] font-bold text-[#ff7316] bg-[#ff7316]/10 flex items-center gap-3">
+                    <i class="fas fa-home w-5 text-center"></i> Home
+                </a>
+                <a href="./about.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-building w-5 text-center text-slate-400"></i> About
+                </a>
+                <a href="./services.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-shield-alt w-5 text-center text-slate-400"></i> Services
+                </a>
+                <a href="./office.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt w-5 text-center text-slate-400"></i> Office
+                </a>
+                <a href="./partners.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-handshake w-5 text-center text-slate-400"></i> Partners
+                </a>
+                <a href="./knowledge.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-book-open w-5 text-center text-slate-400"></i> Knowledge
+                </a>
+                <a href="./privacy.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-user-shield w-5 text-center text-slate-400"></i> Privacy Policy
+                </a>
+                
+                <div class="h-px bg-slate-100 my-2"></div>
+                
+                <a href="./contact.html" class="mt-1 px-4 py-3.5 rounded-xl text-[15px] font-bold text-white bg-gradient-to-r from-[#ff7316] to-[#dc2626] text-center shadow-md flex items-center justify-center gap-2 transform active:scale-95 transition-all">
+                    Contact Us <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+
     </header>
+</div>
 
         
 
@@ -159,6 +144,7 @@
         <div class="container mx-auto  text-center mb-8 mt-10">
             <h1 class="text-4xl sm:text-5xl font-extrabold text-red-600 tracking-wide">Offensive Security Services</h1>
         </div>
+     </div>
 
         <!-- Red Team Services Grid -->
       <div id="offensive" class="container mx-auto flex flex-wrap justify-center items-center gap-x-8 gap-y-20 px-4 max-w-7xl py-12 mb-24">
@@ -283,7 +269,7 @@
         <p class="text-lg font-semibold mt-6">Social Engineering Assessment</p>
     </div>
 
-</div>
+        </div>
 
         <!-- Secondary Header -->
         <div class="container mx-auto  text-center mb-8">
@@ -640,142 +626,245 @@
     
     <div class="text-center mb-10 max-w-6xl mx-auto px-6">
         <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-4 leading-tight">
-            Cybersecurity Frameworks, Standards & Methodologies<br class="hidden md:block"> <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"> We Follow</span>
+            Cybersecurity Frameworks, Standards & Methodologies<br class="hidden md:block"> 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"> <br>We Follow</span>
         </h1>
         <p class="text-sm md:text-base text-slate-500 font-medium max-w-2xl mx-auto">
             Our services are aligned with internationally recognized cybersecurity frameworks, standards, methodologies, and industry best practices.
         </p>
     </div>
 
-    <div class="max-w-[90%] mx-auto px-2 sm:px-4">
-        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] custom-scrollbar">
+ <div class="max-w-[95%] mx-auto px-2 sm:px-4 py-12 font-sans">
+    <div class="overflow-x-auto rounded-xl bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-200 custom-scrollbar">
+        
+        <table class="w-full min-w-[1000px] lg:min-w-[1200px] border-collapse">
             
-            <table class="w-full text-sm text-slate-700 min-w-[1100px] border-collapse">
+            <thead class="text-[10px] md:text-xs lg:text-sm uppercase tracking-wider font-bold text-white bg-orange-500">
+                <tr>
+                    <th class="px-2 md:px-4 py-3 md:py-4 lg:py-5 font-semibold text-center w-[16%]">Governance, Risk <br>& Compliance</th>
+                    <th class="px-2 md:px-4 py-3 md:py-4 lg:py-5 font-semibold text-center w-[16%]">Security Frameworks <br>& Controls</th>
+                    <th class="px-2 md:px-4 py-3 md:py-4 lg:py-5 font-semibold text-center w-[16%]">Secure Development <br>Standards</th>
+                    <th class="px-2 md:px-4 py-3 md:py-4 lg:py-5 font-semibold text-center w-[16%]">Security Assessment <br>Methodologies</th>
+                    <th class="px-2 md:px-4 py-3 md:py-4 lg:py-5 font-semibold text-center w-[16%]">Threat Intelligence & <br>Adversary Frameworks</th>
+                    <th class="px-2 md:px-4 py-3 md:py-4 lg:py-5 font-semibold text-center w-[20%]">Security Risk <br>References</th>
+                </tr>
+            </thead>
+
+            <tbody class="divide-y divide-slate-100 text-xs md:text-sm lg:text-base">
                 
-                <thead class="text-xs uppercase tracking-wider text-white bg-gradient-to-r from-orange-600 to-red-400">
-                    <tr>
-                        <th class="px-4 py-5 border-r border-blue-400/30 text-center font-bold w-[16%]">Governance, Risk <br>& Compliance</th>
-                        <th class="px-4 py-5 border-r border-blue-400/30 text-center font-bold w-[16%]">Security Frameworks <br>& Controls</th>
-                        <th class="px-4 py-5 border-r border-blue-400/30 text-center font-bold w-[16%]">Secure Development <br>Standards</th>
-                        <th class="px-4 py-5 border-r border-blue-400/30 text-center font-bold w-[16%]">Security Assessment <br>Methodologies</th>
-                        <th class="px-4 py-5 border-r border-blue-400/30 text-center font-bold w-[16%]">Threat Intelligence & <br>Adversary Frameworks</th>
-                        <th class="px-4 py-5 text-center font-bold w-[20%]">Security Risk <br>References</th>
-                    </tr>
-                </thead>
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">ISO 27001</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">SANS</span>
+                            <span class="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">CIS Controls v8</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">OWASP ASVS</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">PTES</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[10px] md:text-xs lg:text-sm font-bold text-slate-600 bg-slate-100 border border-slate-200 px-2.5 md:px-3 py-1 lg:py-1.5 rounded-md shadow-sm group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-200 transition-colors">MITRE ATT&CK</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">OWASP Top 10</span>
+                    </td>
+                </tr>
 
-                <tbody class="divide-y divide-slate-100">
-                    
-                    <tr class="hover:bg-blue-50/60 transition-colors duration-300 group cursor-default">
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <span class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">ISO 27001</span>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="flex flex-col items-center justify-center gap-1 group-hover:scale-105 transition-transform">
-                                <span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase">SANS</span>
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">CIS Controls v8</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">OWASP ASVS</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">PTES</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-xs font-bold text-yellow-800 bg-yellow-100 border border-yellow-300 px-3 py-1.5 rounded-full shadow-sm">MITRE ATT&CK</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 align-middle text-center">
-                            <span class="text-sm font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors">OWASP Top 10</span>
-                        </td>
-                    </tr>
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">ISO 27701</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">NIST</span>
+                            <span class="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">CSF 2.0</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">OWASP MASVS</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">OSSTMM</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[10px] md:text-xs lg:text-sm font-bold text-slate-600 bg-slate-100 border border-slate-200 px-2.5 md:px-3 py-1 lg:py-1.5 rounded-md shadow-sm group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-200 transition-colors">MITRE D3FEND</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">OWASP API Top 10</span>
+                    </td>
+                </tr>
 
-                    <tr class="hover:bg-blue-50/60 transition-colors duration-300 group cursor-default">
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <span class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">ISO 27701</span>
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">ISO 22301</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">NIST</span>
+                            <span class="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">SP 800-53</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
                         </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase block mb-1">NIST</span>
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">CSF 2.0</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">OWASP MASVS</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">OSSTMM</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-xs font-bold text-orange-800 bg-orange-100 border border-orange-300 px-3 py-1.5 rounded-full shadow-sm">MITRE D3FEND</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 align-middle text-center">
-                            <span class="text-sm font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors">OWASP API Top 10</span>
-                        </td>
-                    </tr>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">ISSAF</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-indigo-600 transition-all duration-300 group-hover:text-indigo-700 group-hover:-translate-y-0.5">STIX / TAXII</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">OWASP Mobile Top 10</span>
+                    </td>
+                </tr>
 
-                    <tr class="hover:bg-blue-50/60 transition-colors duration-300 group cursor-default">
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <span class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">ISO 22301</span>
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">PCI DSS</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-indigo-600 transition-all duration-300 group-hover:text-indigo-700 group-hover:-translate-y-0.5">CIS Benchmarks</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
                         </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase block mb-1">NIST</span>
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">SP 800-53</span>
-                            </div>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">NIST</span>
+                            <span class="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">SP 800-115</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
                         </td>
-                        <td class="px-4 py-6 border-r border-slate-100 bg-slate-50/50">
-                            </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">ISSAF</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <span class="text-sm font-bold text-indigo-600 group-hover:text-indigo-800 transition-colors">STIX / TAXII</span>
-                        </td>
-                        <td class="px-4 py-6 align-middle text-center">
-                            <span class="text-sm font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors">OWASP Mobile Top 10</span>
-                        </td>
-                    </tr>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">OWASP LLM Top 10</span>
+                    </td>
+                </tr>
 
-                    <tr class="hover:bg-blue-50/60 transition-colors duration-300 group cursor-default">
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <span class="text-sm font-bold text-slate-800 group-hover:text-blue-600 transition-colors">PCI DSS</span>
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">HIPAA</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
                         </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <span class="text-sm font-bold text-indigo-600 group-hover:text-indigo-800 transition-colors">CIS Benchmarks</span>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">OWASP SAMM</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-semibold text-slate-700 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">OWASP WSTG</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
                         </td>
-                        <td class="px-4 py-6 border-r border-slate-100 bg-slate-50/50">
-                            </td>
-                        <td class="px-4 py-6 border-r border-slate-100 align-middle text-center">
-                            <div class="inline-block group-hover:scale-105 transition-transform">
-                                <span class="text-[10px] font-bold tracking-widest text-slate-400 uppercase block mb-1">NIST</span>
-                                <span class="text-sm font-bold text-slate-800 group-hover:text-blue-700 transition-colors">SP 800-115</span>
-                            </div>
-                        </td>
-                        <td class="px-4 py-6 border-r border-slate-100 bg-slate-50/50">
-                            </td>
-                        <td class="px-4 py-6 align-middle text-center">
-                            <span class="text-sm font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors">OWASP LLM Top 10</span>
-                        </td>
-                    </tr>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">CVE</span>
+                    </td>
+                </tr>
 
-                </tbody>
-            </table>
-        </div>
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">GDPR</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">NIST</span>
+                            <span class="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">SSDF</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">CWE</span>
+                    </td>
+                </tr>
+
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">SOC 2</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">MICROSOFT</span>
+                            <span class="font-semibold text-slate-700 group-hover:text-blue-600 transition-colors">SDL</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">CAPEC</span>
+                    </td>
+                </tr>
+
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">CMMC</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-medium text-slate-600 transition-all duration-300 group-hover:text-slate-900 group-hover:-translate-y-0.5">CVSS</span>
+                    </td>
+                </tr>
+
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <div class="inline-block transition-all duration-300 group-hover:-translate-y-0.5">
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-bold tracking-widest text-slate-400 uppercase block mb-0.5">NIST</span>
+                            <span class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">RMF</span>
+                            <span class="text-[9px] md:text-[10px] lg:text-xs font-medium text-slate-500 block mt-1">(Risk Management Framework)</span>
+                        </div>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                </tr>
+
+                <tr class="hover:bg-slate-50/80 transition-colors duration-200 group">
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center">
+                        <span class="inline-block font-bold text-slate-800 transition-all duration-300 group-hover:text-blue-600 group-hover:-translate-y-0.5">COBIT</span>
+                    </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                    <td class="px-2 md:px-4 py-3 md:py-4 lg:py-5 align-middle text-center bg-slate-50/30">
+                        </td>
+                </tr>
+
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -784,32 +873,15 @@
         height: 6px;
     }
     .custom-scrollbar::-webkit-scrollbar-track {
-        background: #f1f5f9; 
-        border-radius: 8px;
+        background: #f8fafc; 
+        border-radius: 4px;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb {
         background: #cbd5e1; 
-        border-radius: 8px;
+        border-radius: 4px;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #3b82f6; 
-    }
-</style>
-
-<style>
-    .custom-scrollbar::-webkit-scrollbar {
-        height: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: #f1f5f9; 
-        border-radius: 8px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #cbd5e1; 
-        border-radius: 8px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #3b82f6; 
+        background: #94a3b8; 
     }
 </style>
         <!-- END TESTING METHODOLOGIES SECTION -->
@@ -820,7 +892,7 @@
 
 
         <!-- footer start  -->
-   <footer class="  container mx-auto md:flex justify-between items-start mt-5 md:mt-10  px-5 ">
+    <footer class=" lg:max-w-7xl container mx-auto md:flex justify-between items-start mt-5 md:mt-10  px-5 ">
  
         <!-- Logo start  -->
          <section class="">
@@ -838,29 +910,29 @@
             <article>
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./index.html#home" class="text-base lg:text-lg font-semibold">
+                        <a href="./index.html#home" class="text-sm lg:text-base font-semibold">
                             Home
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./index.html#products" class=""> 
                             Products
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./index.html#brands" class=""> 
                             Brands
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./index.html#partners" class=""> 
                             Partners
                         </a>
                     </li>
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./index.html#customers" class="">
                             Customers
                         </a>
@@ -873,24 +945,24 @@
             <article class="">
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./about.html" class="text-base lg:text-lg font-semibold">
+                        <a href="./about.html" class="text-sm lg:text-base font-semibold">
                             About
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./about.html#capabilities" class=""> 
                             Capabilities
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./about.html#vision" class=""> 
                             Vision
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./about.html#mission" class=""> 
                             Mission
                         </a>
@@ -903,42 +975,42 @@
               <article>
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./services.html" class="text-base lg:text-lg font-semibold">
+                        <a href="./services.html" class="text-sm lg:text-base font-semibold">
                             Services
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./services.html#offensive" class=""> 
                             Offensive 
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./services.html#defensive" class="">
                             Defensive 
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./services.html#training" class="">
                             Training
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./services.html#developement" class="">
                             Developement
                         </a>
                     </li>
 
-                     <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./services.html#trading" class="">
                             Trading
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./services.html#methodologies" class="">
                             Methodologies
                         </a>
@@ -953,24 +1025,24 @@
             <article class="">
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./knowledge.html" class="text-base lg:text-lg font-semibold">
+                        <a href="./knowledge.html" class="text-sm lg:text-base font-semibold">
                             Knowledge
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./knowledge.html#cyber" class=""> 
                             Cyber Security
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./knowledge.html#analysis" class=""> 
                             Analysis Process
                         </a>
                     </li>
-
-                        <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./knowledge.html#aiOffSec" class=""> 
                             AIOffsec
                         </a>
@@ -984,12 +1056,12 @@
             <article>
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./office.html" class="text-base lg:text-lg font-semibold">
+                        <a href="./office.html" class="text-sm lg:text-base font-semibold">
                             Office
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./office.html#gallery" class=""> 
                             Gallery
                         </a>
@@ -1004,12 +1076,12 @@
             <article>
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./office.html" class="text-base lg:text-lg font-semibold">
+                        <a href="./office.html" class="text-sm lg:text-base font-semibold">
                             Privacy Policy
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./privacy.html" class=""> 
                             Privacy Policy
                         </a>
@@ -1025,12 +1097,12 @@
             <article>
                 <ul class="flex flex-col space-x-1 md:space-y-2">
                     <li class="hover:text-blue-700 duration-300 text-slate-700">
-                        <a href="./contact.html" class="text-base lg:text-lg font-semibold">
+                        <a href="./contact.html" class="text-sm lg:text-base font-semibold">
                             Contact 
                         </a>
                     </li>
 
-                    <li class="hover:text-blue-700 duration-300 text-sm lg:text-base mt-1 md:mt-4 text-slate-700">
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
                         <a href="./contact.html#map" class=""> 
                             Map
                         </a>
@@ -1155,4 +1227,52 @@
 
 </body>
 <script src="./nav.js"></script>
+<script>
+            // --- Navbar Floating & Dropdown Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const navIcon = document.querySelector('.navIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const one = document.querySelector('.one');
+    const two = document.querySelector('.two');
+    const three = document.querySelector('.three');
+
+    if(navIcon && mobileMenu) {
+        navIcon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent document click from firing
+            
+            // Toggle Hamburger Animation (Smooth X)
+            one.classList.toggle('rotate-45');
+            one.classList.toggle('translate-x-[2px]');
+            one.classList.toggle('-translate-y-[1px]');
+            
+            two.classList.toggle('opacity-0');
+            two.classList.toggle('translate-x-4');
+            
+            three.classList.toggle('-rotate-45');
+            three.classList.toggle('translate-x-[2px]');
+            three.classList.toggle('translate-y-[1px]');
+
+            // Toggle Dropdown Menu Visibility
+            if(mobileMenu.classList.contains('invisible')) {
+                mobileMenu.classList.remove('invisible', 'opacity-0', '-translate-y-4');
+                mobileMenu.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+                mobileMenu.classList.add('opacity-0', '-translate-y-4');
+                setTimeout(() => {
+                    mobileMenu.classList.add('invisible');
+                }, 300); // Wait for transition to finish
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navIcon.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('invisible')) {
+                navIcon.click(); // Trigger the click to close and animate hamburger back
+            }
+        });
+    }
+});
+
+</script>
 </html>

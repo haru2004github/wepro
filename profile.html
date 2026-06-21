@@ -213,5 +213,54 @@
             }
         };
     </script>
+
+    <script>
+            // --- Navbar Floating & Dropdown Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const navIcon = document.querySelector('.navIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const one = document.querySelector('.one');
+    const two = document.querySelector('.two');
+    const three = document.querySelector('.three');
+
+    if(navIcon && mobileMenu) {
+        navIcon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent document click from firing
+            
+            // Toggle Hamburger Animation (Smooth X)
+            one.classList.toggle('rotate-45');
+            one.classList.toggle('translate-x-[2px]');
+            one.classList.toggle('-translate-y-[1px]');
+            
+            two.classList.toggle('opacity-0');
+            two.classList.toggle('translate-x-4');
+            
+            three.classList.toggle('-rotate-45');
+            three.classList.toggle('translate-x-[2px]');
+            three.classList.toggle('translate-y-[1px]');
+
+            // Toggle Dropdown Menu Visibility
+            if(mobileMenu.classList.contains('invisible')) {
+                mobileMenu.classList.remove('invisible', 'opacity-0', '-translate-y-4');
+                mobileMenu.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+                mobileMenu.classList.add('opacity-0', '-translate-y-4');
+                setTimeout(() => {
+                    mobileMenu.classList.add('invisible');
+                }, 300); // Wait for transition to finish
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navIcon.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('invisible')) {
+                navIcon.click(); // Trigger the click to close and animate hamburger back
+            }
+        });
+    }
+});
+
+</script>
 </body>
 </html>
