@@ -61,6 +61,21 @@
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
             background-size: 20px 20px;
         }
+
+        /* Flex Grid for Partner Cards */
+        .partner-grid > div {
+            width: calc(50% - 0.5rem);
+        }
+        @media (min-width: 768px) {
+            .partner-grid > div {
+                width: calc(33.333% - 1rem);
+            }
+        }
+        @media (min-width: 1024px) {
+            .partner-grid > div {
+                width: calc(25% - 1.125rem);
+            }
+        }
     </style>
 </head>
 <body class="text-slate-800">
@@ -161,214 +176,158 @@
 </div>
 
     <!-- Main Content Start -->
-    <main class="w-full pb-20 overflow-hidden">
+    <main class="w-full bg-[#0b1120] min-h-[80vh] relative overflow-hidden">
         
-        <!-- Enterprise Minimalist Hero -->
-        <section class="bg-gradient-to-br from-[#001E3C] to-[#0a1128] pt-20 pb-32 relative animate-fade-up">
-            <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
-            <!-- Glows -->
-            <div class="absolute -top-20 -left-20 w-96 h-96 bg-[#1804fe] rounded-full blur-[150px] opacity-40"></div>
-            <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-[#dc2626] rounded-full blur-[150px] opacity-30"></div>
+        <!-- Partners Section matching screenshot theme -->
+        <section id="partners" class="pt-24 pb-24 relative z-10 w-full">
             
-            <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
-                <span class="inline-block py-1.5 px-4 rounded-full bg-white/10 border border-white/20 text-white backdrop-blur-sm text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
-                    <i class="fas fa-handshake text-[#ff7316] mr-2"></i> Our Ecosystem
-                </span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight leading-tight">
-                    Strategic <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#1804fe]">Technology</span> Partners
-                </h1>
-                <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto font-medium leading-relaxed">
-                    We collaborate with industry-leading technology providers to ensure our customers are equipped with advanced, reliable cybersecurity solutions.
-                </p>
-            </div>
-        </section>
+            <div class="w-full lg:max-w-[1400px] mx-auto px-4 md:px-8 relative z-10">
+                
+                <!-- Header Section -->
+                <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
+                    <h2 class="text-sm font-bold tracking-widest text-[#ff7316] uppercase mb-4">Our Network</h2>
+                    <h3 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+                        Trusted Partners
+                    </h3>
+                    <div class="w-16 h-1.5 bg-gradient-to-r from-[#ff7316] to-[#facc15] mx-auto rounded-full mb-8 shadow-sm"></div>
+                    <p class="text-lg md:text-xl text-slate-400 font-medium leading-relaxed">
+                        We collaborate with world-leading technology innovators to deliver secure, scalable, and premium digital solutions.
+                    </p>
+                </div>
 
-        <!-- Dynamic Partners Area -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 -mt-20 relative z-20 space-y-12 pb-16">
+                <div class="flex flex-col gap-8 md:gap-12 items-center w-full">
+                    
+                    <div class="w-full flex flex-col items-center">
+                        <!-- Section Title -->
+                        <div class="w-full max-w-6xl flex items-center justify-center mb-16 opacity-90 animate-fade-up">
+                            <div class="h-[1px] bg-slate-800 flex-1"></div>
+                            <h4 class="text-xs md:text-sm text-slate-400 font-bold px-8 tracking-[0.2em] uppercase text-center">Our International Partner and Reseller</h4>
+                            <div class="h-[1px] bg-slate-800 flex-1"></div>
+                        </div>
+
+                        <!-- Grid Area -->
+                        <div class="partner-grid flex flex-wrap justify-center gap-4 md:gap-6 w-full max-w-6xl">
+                            
+                            <!-- Partner Item Template -->
+                            <!-- Dr. Web -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 100ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/Dr._Web-Logo.wine.png" alt="Dr. Web" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 scale-[2] group-hover:scale-[2.1] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+                            
+                            <!-- Bitdefender -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 150ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/Bitdefender.png" alt="Bitdefender" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 scale-[2] group-hover:scale-[2.1] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Fortinet -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 200ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/Webo.Fortinet.png" alt="Fortinet" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Check Point -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 250ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/checkpoint.png" alt="Check Point" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 scale-[2] group-hover:scale-[2.1] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Acer -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 300ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/Acer-Authorized-Reseller.png" alt="Acer" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Lenovo -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 350ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/Lenovo360_Emblem_Authorized.png" alt="Lenovo" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Sophos -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 400ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/Sophos Silver Partner Logo.png" alt="Sophos" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Trend Micro -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 450ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/trend ai.png" alt="Trend Micro" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Ruijie -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 500ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/ruijie.png" alt="Ruijie" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Kaspersky -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 550ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/kaspersky.png" alt="Kaspersky" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Dell -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 600ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/company/dell-2.svg" alt="Dell" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Cisco -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 650ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/company/cisco-2.svg" alt="Cisco" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- McAfee -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 700ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/mcafee.png" alt="McAfee" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                            <!-- Hack The Box -->
+                            <div class="group relative rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 cursor-pointer animate-fade-up aspect-[3/2] flex items-center justify-center p-6 md:p-8 overflow-hidden hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]" style="animation-delay: 750ms;">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-transparent group-hover:to-orange-500/10 transition-all duration-500"></div>
+                                <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400/0 group-hover:via-blue-400/50 to-transparent transition-all duration-500"></div>
+                                <div class="absolute bottom-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-orange-400/0 group-hover:via-orange-400/50 to-transparent transition-all duration-500"></div>
+                                <img src="./assets/img/partners/hackthebox.webp" alt="Hack The Box" class="relative z-10 w-full h-full object-contain filter drop-shadow-md transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             
-            <!-- 1. Fortinet Partner Card (Overlapping Premium Design) -->
-            <div id="fortinet" class="relative animate-fade-up delay-100">
-                <!-- Background Accent Box -->
-                <div class="absolute inset-0 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 transform translate-y-4 translate-x-2 -z-10 hidden md:block"></div>
-                
-                <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden flex flex-col md:flex-row items-stretch group relative z-0">
-                    
-                    <!-- Left: Floating Logo Box -->
-                    <div class="md:w-5/12 bg-red-500 relative p-10 md:p-14 flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-100">
-                        <div class="absolute inset-0 bg-dot-pattern opacity-50"></div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-100 rounded-full blur-[60px] opacity-60 pointer-events-none group-hover:scale-110 transition-transform duration-700"></div>
-                        
-                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative z-10 w-full max-w-[280px] aspect-[4/3] flex items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                            <img src="./assets/img/partners/FortiGood.png" 
-                                 alt="Fortinet Authorized Partner" 
-                                 class="w-full max-w-[180px] object-contain"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/400x150/ffffff/dc2626?text=Fortinet';">
-                        </div>
-                    </div>
-
-                    <!-- Right: Elegant Typography -->
-                    <div class="md:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
-                        <!-- Subtle background watermark -->
-                        <i class="fas fa-shield-alt absolute -bottom-10 -right-10 text-9xl text-slate-50 opacity-50 pointer-events-none transform -rotate-12"></i>
-
-                        <div class="relative z-10">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-50 text-[#dc2626] rounded-md text-xs font-bold tracking-wider uppercase mb-4 border border-red-100">
-                                <i class="fas fa-certificate"></i> Certified Partner
-                            </div>
-                            <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight leading-snug">
-                                Fortinet Authorized Partner
-                            </h2>
-                            <div class="w-12 h-1 bg-gradient-to-r from-[#dc2626] to-[#ff7316] mb-6 rounded-full"></div>
-                            
-                            <p class="text-slate-600 font-medium leading-relaxed text-[15px] lg:text-base">
-                                wePro Company Limited is proud to partner with Fortinet, a global leader in cybersecurity solutions. As a Fortinet Authorized Partner, we provide customers with access to world-class security technologies, expert consulting services, and proven implementation capabilities. Our mission is to help organizations strengthen cyber resilience, reduce security risks, and confidently embrace digital transformation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. Bitdefender Partner Card (Alternating Layout) -->
-            <div id="bitdefender" class="relative animate-fade-up delay-200">
-                <!-- Background Accent Box -->
-                <div class="absolute inset-0 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 transform translate-y-4 -translate-x-2 -z-10 hidden md:block"></div>
-                
-                <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden flex flex-col md:flex-row-reverse items-stretch group relative z-0">
-                    
-                    <!-- Right: Floating Logo Box -->
-                    <div class="md:w-5/12 bg-slate-900 relative p-10 md:p-14 flex items-center justify-center border-b md:border-b-0 md:border-l border-slate-800">
-                        <div class="absolute inset-0" style="background-image: radial-gradient(#ffffff20 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#1804fe] rounded-full blur-[60px] opacity-50 pointer-events-none group-hover:scale-110 transition-transform duration-700"></div>
-                        
-                        <div class="bg-white p-8 rounded-2xl shadow-2xl border border-slate-200 relative z-10 w-full max-w-[280px] aspect-[4/3] flex items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                            <!-- Bitdefender Logo -->
-                            <img src="./assets/img/partners/Bitdefender_business_sales_badge.png" 
-                                 alt="Bitdefender Certified Partner" 
-                                 class="w-full max-w-[180px] object-contain"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/400x150/ffffff/000000?text=Bitdefender';">
-                        </div>
-                    </div>
-
-                    <!-- Left: Elegant Typography -->
-                    <div class="md:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
-                        <i class="fas fa-lock absolute -bottom-10 -left-10 text-9xl text-slate-50 opacity-50 pointer-events-none transform rotate-12"></i>
-
-                        <div class="relative z-10">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-[#1804fe] rounded-md text-xs font-bold tracking-wider uppercase mb-4 border border-blue-100">
-                                <i class="fas fa-award"></i> Sales Partner
-                            </div>
-                            <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight leading-snug">
-                                Bitdefender Certified <br class="hidden lg:block"/> Business Sales Partner
-                            </h2>
-                            <div class="w-12 h-1 bg-gradient-to-r from-[#1804fe] to-[#3b82f6] mb-6 rounded-full"></div>
-                            
-                            <p class="text-slate-600 font-medium leading-relaxed text-[15px] lg:text-base">
-                                As a Bitdefender Certified Business Sales Partner, wePro Company Limited delivers trusted cybersecurity solutions powered by one of the world's leading security vendors. We help organizations strengthen their security posture through advanced endpoint protection, threat prevention, XDR capabilities, and expert cybersecurity guidance tailored to modern business needs.
-                            </p>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-
-            <!-- 3. Dr. Web (Overlapping Premium Design) -->
-            <div id="drweb" class="relative animate-fade-up delay-100">
-                <!-- Background Accent Box -->
-                <div class="absolute inset-0 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 transform translate-y-4 translate-x-2 -z-10 hidden md:block"></div>
-                
-                <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden flex flex-col md:flex-row items-stretch group relative z-0">
-                    
-                    <!-- Left: Floating Logo Box -->
-                    <div class="md:w-5/12 bg-green-500 relative p-10 md:p-14 flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-100">
-                        <div class="absolute inset-0 bg-dot-pattern opacity-50"></div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-red-100 rounded-full blur-[60px] opacity-60 pointer-events-none group-hover:scale-110 transition-transform duration-700"></div>
-                        
-                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative z-10 w-full max-w-[280px] aspect-[4/3] flex items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                            <img src="./assets/img/partners/dr-web-partner.png" 
-                                 alt="Fortinet Authorized Partner" 
-                                 class="w-full max-w-[180px] object-contain"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/400x150/ffffff/dc2626?text=Fortinet';">
-                        </div>
-                    </div>
-
-                    <!-- Right: Elegant Typography -->
-                    <div class="md:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
-                        <!-- Subtle background watermark -->
-                        <i class="fas fa-shield-alt absolute -bottom-10 -right-10 text-9xl text-slate-50 opacity-50 pointer-events-none transform -rotate-12"></i>
-
-                        <div class="relative z-10">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-50 text-green-800 rounded-md text-xs font-bold tracking-wider uppercase mb-4 border border-red-100">
-                                <i class="fas fa-certificate"></i> Certified Partner
-                            </div>
-                            <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight leading-snug">
-                              Dr.Web Certified Partner
-                            </h2>
-                            <div class="w-12 h-1 bg-gradient-to-r from-[#dc2626] to-[#ff7316] mb-6 rounded-full"></div>
-                            
-                            <p class="text-slate-600 font-medium leading-relaxed text-[15px] lg:text-base">
-                            As a Dr.Web Certified Partner, wePro Company Limited delivers proven cybersecurity solutions backed by certified expertise and industry best practices. We help organizations strengthen their defenses against malware, ransomware, and emerging cyber threats through reliable security technologies and professional consulting services.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. checkpoint Partner Card (Alternating Layout) -->
-            <div id="checkpoint" class="relative animate-fade-up delay-200">
-                <!-- Background Accent Box -->
-                <div class="absolute inset-0 bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-100 transform translate-y-4 -translate-x-2 -z-10 hidden md:block"></div>
-                
-                <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden flex flex-col md:flex-row-reverse items-stretch group relative z-0">
-                    
-                    <!-- Right: Floating Logo Box -->
-                    <div class="md:w-5/12 bg-violet-900 relative p-10 md:p-14 flex items-center justify-center border-b md:border-b-0 md:border-l border-slate-800">
-                        <div class="absolute inset-0" style="background-image: radial-gradient(#ffffff20 1px, transparent 1px); background-size: 20px 20px;"></div>
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#1804fe] rounded-full blur-[60px] opacity-50 pointer-events-none group-hover:scale-110 transition-transform duration-700"></div>
-                        
-                        <div class="bg-white p-8 rounded-2xl shadow-2xl border border-slate-200 relative z-10 w-full max-w-[280px] aspect-[4/3] flex items-center justify-center transform group-hover:-translate-y-2 transition-transform duration-500">
-                            <!-- Bitdefender Logo -->
-                            <img src="./assets/img/partners/checkpoint-partner.png" 
-                                 alt="Bitdefender Certified Partner" 
-                                 class="w-full max-w-[180px] object-contain"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/400x150/ffffff/000000?text=Bitdefender';">
-                        </div>
-                    </div>
-
-                    <!-- Left: Elegant Typography -->
-                    <div class="md:w-7/12 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
-                        <i class="fas fa-lock absolute -bottom-10 -left-10 text-9xl text-slate-50 opacity-50 pointer-events-none transform rotate-12"></i>
-
-                        <div class="relative z-10">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-[#1804fe] rounded-md text-xs font-bold tracking-wider uppercase mb-4 border border-blue-100">
-                                <i class="fas fa-award"></i>  Certified Partner
-                            </div>
-                            <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight leading-snug">
-                                Check Point Advanced Partner
-                            </h2>
-                            <div class="w-12 h-1 bg-gradient-to-r from-[#1804fe] to-[#3b82f6] mb-6 rounded-full"></div>
-                            
-                            <p class="text-slate-600 font-medium leading-relaxed text-[15px] lg:text-base">
-                               
-                                As a Check Point Advanced Partner, wePro Company Limited provides customers with access to industry-leading cybersecurity technologies, certified expertise, and professional security services. Together with Check Point, we help organizations secure their digital environments, reduce cyber risk, and confidently embrace digital transformation.
-                            </p>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-
-
         </section>
-
-        <!-- Other Trusted Partners Grid (Optional/Footer-style) -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-8">
-            <div class="flex items-center justify-center gap-4 opacity-50 grayscale">
-                <span class="text-sm font-bold text-slate-400 uppercase tracking-widest">More Ecosystem Partners Coming Soon</span>
-            </div>
-        </section>
-
     </main>
 
     <!-- Divider -->

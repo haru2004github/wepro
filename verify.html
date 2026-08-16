@@ -150,7 +150,7 @@
                 </div>
 
                 <!-- Form -->
-                <form id="verifyForm" class="flex flex-col gap-5 relative z-10">
+                <div id="verifyForm" class="flex flex-col gap-5 relative z-10">
                     <div class="relative group/input">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-5 pointer-events-none">
                             <i class="fas fa-fingerprint text-slate-500 group-focus-within/input:text-blue-400 transition-colors duration-300 text-lg"></i>
@@ -159,7 +159,7 @@
                             class="w-full pl-12 pr-5 py-3.5 rounded-xl border border-slate-700/50 focus:outline-none focus:border-blue-500/50 focus:ring-4 focus:ring-blue-500/10 transition-all duration-300 text-slate-200 bg-slate-800/40 hover:bg-slate-800/60 text-base font-medium shadow-inner placeholder:text-slate-500" required>
                     </div>
                     
-                    <button type="submit" class="w-full relative overflow-hidden bg-gradient-to-r from-[#004182] to-blue-700 text-white font-bold py-3.5 px-8 rounded-xl shadow-[0_10px_25px_rgba(0,65,130,0.5)] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(255,115,22,0.4)] group/btn">
+                    <button type="button" id="verifyBtn" class="w-full relative overflow-hidden bg-gradient-to-r from-[#004182] to-blue-700 text-white font-bold py-3.5 px-8 rounded-xl shadow-[0_10px_25px_rgba(0,65,130,0.5)] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(255,115,22,0.4)] group/btn">
                         <!-- Button Hover Gradient -->
                         <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-[#ff7316] to-[#dc2626] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 ease-out"></span>
                         
@@ -167,7 +167,7 @@
                             <i class="fas fa-search"></i> Verify Credential
                         </span>
                     </button>
-                </form>
+                </div>
 
                 <!-- Error Message -->
                 <div id="errorMsg" class="mt-6 flex items-center justify-center gap-2 text-red-400 text-sm font-medium p-3 bg-red-500/10 rounded-xl hidden opacity-0 transition-opacity duration-300 border border-red-500/20">
@@ -277,6 +277,7 @@
         <h1 class="text-center font-bold text-slate-800">© 2026 wePro. All rights reserved.</h1>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         // Navbar Floating & Dropdown Logic
         document.addEventListener('DOMContentLoaded', () => {
@@ -317,16 +318,95 @@
         });
 
         // Verification Logic
-        document.getElementById('verifyForm').addEventListener('submit', function(e) {
+        const certIdInput = document.getElementById('certId');
+        const verifyBtn = document.getElementById('verifyBtn');
+        const errorMsg = document.getElementById('errorMsg');
+
+        certIdInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                verifyBtn.click();
+            }
+        });
+
+        verifyBtn.addEventListener('click', async function(e) {
             e.preventDefault();
-            const certIdInput = document.getElementById('certId');
             const certId = certIdInput.value.trim();
-            const errorMsg = document.getElementById('errorMsg');
 
             if (certId) {
                 errorMsg.classList.add('hidden', 'opacity-0');
-                // Open the PDF in a new tab
-                window.open('./verify/' + encodeURIComponent(certId) + '.pdf', '_blank');
+                
+                // Show loading state on button
+                const originalBtnContent = verifyBtn.innerHTML;
+                verifyBtn.innerHTML = `
+                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-[#ff7316] to-[#dc2626] opacity-100 transition-opacity duration-300 ease-out"></span>
+                    <span class="relative z-10 flex items-center justify-center gap-2 text-base tracking-wide">
+                        <i class="fas fa-spinner fa-spin"></i> Verifying...
+                    </span>
+                `;
+                verifyBtn.disabled = true;
+
+                try {
+                    const pdfUrl = `./verify/${encodeURIComponent(certId)}.pdf`;
+                    const response = await fetch(pdfUrl, { method: 'HEAD' });
+
+                    if (response.ok) {
+                        // Open the PDF in a new tab with a custom title wrapper
+                        const previewWin = window.open('', '_blank');
+                        previewWin.document.write(
+                            '<!DOCTYPE html>\n' +
+                            '<html lang="en">\n' +
+                            '<head>\n' +
+                            '    <meta charset="UTF-8">\n' +
+                            '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
+                            '    <title>wePro co.,ltd</title>\n' +
+                            '    <style>\n' +
+                            '        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #333; }\n' +
+                            '        embed { width: 100%; height: 100%; border: none; }\n' +
+                            '    </style>\n' +
+                            '</head>\n' +
+                            '<body>\n' +
+                            '    <embed src="' + pdfUrl + '" type="application/pdf" />\n' +
+                            '</' + 'body>\n' +
+                            '</' + 'html>'
+                        );
+                        previewWin.document.close();
+                        previewWin.document.title = "wePro co.,ltd";
+                    } else {
+                        // File not found (404)
+                        Swal.fire({
+                            icon: 'error',
+                            title: '<h2 class="text-2xl font-bold text-white">Not Verified</h2>',
+                            html: '<p class="text-slate-400">The certificate ID you entered is invalid or not found in our registry.</p>',
+                            background: '#0b1120',
+                            iconColor: '#ef4444',
+                            confirmButtonColor: '#ff7316',
+                            confirmButtonText: 'Try Again',
+                            customClass: {
+                                popup: 'border border-slate-700/50 shadow-[0_0_40px_rgba(255,115,22,0.15)] rounded-3xl',
+                                confirmButton: 'rounded-xl px-8 py-3 font-bold transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,115,22,0.4)]'
+                            }
+                        });
+                    }
+                } catch (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: '<h2 class="text-2xl font-bold text-white">Oops...</h2>',
+                        html: '<p class="text-slate-400">Something went wrong while verifying. Please check your connection and try again.</p>',
+                        background: '#0b1120',
+                        iconColor: '#ef4444',
+                        confirmButtonColor: '#ff7316',
+                        confirmButtonText: 'Close',
+                        customClass: {
+                            popup: 'border border-slate-700/50 shadow-[0_0_40px_rgba(255,115,22,0.15)] rounded-3xl',
+                            confirmButton: 'rounded-xl px-8 py-3 font-bold transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,115,22,0.4)]'
+                        }
+                    });
+                } finally {
+                    // Restore button state
+                    verifyBtn.innerHTML = originalBtnContent;
+                    verifyBtn.disabled = false;
+                }
             } else {
                 errorMsg.classList.remove('hidden');
                 setTimeout(() => errorMsg.classList.remove('opacity-0'), 10);
