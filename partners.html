@@ -77,6 +77,26 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+(() => {
+  if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add("is-visible"); observer.unobserve(entry.target); }
+  }), { threshold: 0.08, rootMargin: "0px 0px -30px 0px" });
+  function observe(container) {
+    container.querySelectorAll("main section, main article, body > section, #detail section").forEach(element => {
+      if (element.dataset.corporateObserved || element.getBoundingClientRect().top < innerHeight * .85) return;
+      element.dataset.corporateObserved = "true"; element.classList.add("corporate-reveal"); observer.observe(element);
+    });
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    observe(document);
+    const detail = document.getElementById("detail");
+    if (detail) new MutationObserver(() => observe(detail)).observe(detail, { childList: true, subtree: true });
+  });
+})();
+</script>
 </head>
 <body class="text-slate-800">
 

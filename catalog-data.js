@@ -29,7 +29,17 @@ const catalog = [
         "File Shredder"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 54900
+      },
+      {
+        "devices": 3,
+        "amount": 82500
+      }
+    ]
   },
   {
     "id": "bitdefender-internet-security",
@@ -66,7 +76,17 @@ const catalog = [
         "File Shredder"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 82500
+      },
+      {
+        "devices": 3,
+        "amount": 109000
+      }
+    ]
   },
   {
     "id": "bitdefender-mac",
@@ -91,7 +111,17 @@ const catalog = [
         "Parental Control"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 61900
+      },
+      {
+        "devices": 3,
+        "amount": 96000
+      }
+    ]
   },
   {
     "id": "bitdefender-total-security",
@@ -160,7 +190,17 @@ const catalog = [
         "Anti-Theft"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 5,
+        "amount": 137000
+      },
+      {
+        "devices": 10,
+        "amount": 150000
+      }
+    ]
   },
   {
     "id": "bitdefender-premium",
@@ -169,7 +209,8 @@ const catalog = [
     "devices": "On request",
     "img": "catalog/Products/Bitdefender/Premium Security.jpg",
     "sections": {},
-    "note": "Available upon special request."
+    "note": "Available upon special request.",
+    "prices": []
   },
   {
     "id": "bitdefender-ultimate",
@@ -178,7 +219,8 @@ const catalog = [
     "devices": "On request",
     "img": "catalog/Products/Bitdefender/ultimate security.jpg",
     "sections": {},
-    "note": "Available upon special request."
+    "note": "Available upon special request.",
+    "prices": []
   },
   {
     "id": "drweb-pc",
@@ -216,7 +258,17 @@ const catalog = [
         "Dr.Web Cloud"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 44000
+      },
+      {
+        "devices": 3,
+        "amount": 55000
+      }
+    ]
   },
   {
     "id": "drweb-android",
@@ -238,7 +290,17 @@ const catalog = [
         "Automatic Threat Quarantine"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 27500
+      },
+      {
+        "devices": 5,
+        "amount": 44000
+      }
+    ]
   },
   {
     "id": "kaspersky-standard",
@@ -291,7 +353,21 @@ const catalog = [
         "Anti-Phishing"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 53000
+      },
+      {
+        "devices": 3,
+        "amount": 98000
+      },
+      {
+        "devices": 5,
+        "amount": 132000
+      }
+    ]
   },
   {
     "id": "kaspersky-plus",
@@ -353,13 +429,31 @@ const catalog = [
         "Cryptojacking Protection"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 101200
+      },
+      {
+        "devices": 3,
+        "amount": 164400
+      },
+      {
+        "devices": 5,
+        "amount": 234400
+      },
+      {
+        "devices": 10,
+        "amount": 347800
+      }
+    ]
   },
   {
     "id": "kaspersky-premium",
     "name": "Kaspersky Premium",
     "brand": "Kaspersky",
-    "devices": "1, 3 or 4",
+    "devices": "1, 3 or 5",
     "img": "catalog/Products/Kaspersky/kaspersky premium.webp",
     "sections": {
       "Identity Protection": [
@@ -430,7 +524,21 @@ const catalog = [
         "Cryptojacking Protection"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 113900
+      },
+      {
+        "devices": 3,
+        "amount": 183500
+      },
+      {
+        "devices": 5,
+        "amount": 284500
+      }
+    ]
   },
   {
     "id": "mcafee-total",
@@ -452,6 +560,24 @@ const catalog = [
         "Virus Protection Pledge"
       ]
     },
-    "note": ""
+    "note": "",
+    "prices": [
+      {
+        "devices": 1,
+        "amount": 75500
+      },
+      {
+        "devices": 3,
+        "amount": 113500
+      },
+      {
+        "devices": 5,
+        "amount": 165000
+      },
+      {
+        "devices": 10,
+        "amount": 221000
+      }
+    ]
   }
 ];
