@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>wePro - Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/bullet.png">
+
+    <style>
+        body {
+             font-family: "Poppins", sans-serif;
+             background-color: #FFFFFF;
+        }
+        h1, h2, h3, h4 {
+             font-family: "Raleway", sans-serif;
+        }
+
+        /* navbar toggle start  */
+        .one.active{
+            transform-origin: left!important;
+            transform: rotate(40deg)!important;
+        }
+        .two.active{
+            transform: translateX(-30px)!important;
+            opacity: 0!important;
+        }
+        .three.active{
+            transform-origin: left!important;
+            transform: rotate(-40deg) !important;
+        }
+        .navDisplay.active{
+            display: block !important;
+        }
+        /* navbar toggle end  */
+
+        /* Smooth Entrance Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            opacity: 0;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 150ms; }
+        .delay-200 { animation-delay: 300ms; }
+
+        /* Premium Background Grid */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, #ffffff10 1px, transparent 1px),
+                              linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Abstract Pattern for Cards */
+        .bg-dot-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Flex Grid for Partner Cards */
+        .partner-grid > div {
+            width: calc(50% - 0.5rem);
+        }
+        @media (min-width: 768px) {
+            .partner-grid > div {
+                width: calc(33.333% - 1rem);
+            }
+        }
+        @media (min-width: 1024px) {
+            .partner-grid > div {
+                width: calc(25% - 1.125rem);
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header -->
+       <div class="sticky top-0 z-50 pt-3 px-3 sm:px-6 w-full transition-all duration-300" id="header-wrapper">
+    <header class="max-w-7xl mx-auto bg-white/85 backdrop-blur-xl border-t border-l border-r border-slate-200/60 border-b-[3px] border-b-[#ff7316] shadow-[0_10px_30px_rgb(0,0,0,0.08)] rounded-2xl relative transition-all duration-300">
+
+        <nav class="px-4 sm:px-6 py-2.5 flex items-center justify-between">
+            <a href="./index.html" class="flex items-center gap-2 group relative z-50">
+                <img src="./assets/img/weprologo.png" class="h-9 md:h-11 lg:h-12 transition-transform duration-300 group-hover:scale-105 drop-shadow-sm" alt="wePro Logo">
+            </a>
+
+            <ul class="hidden lg:flex items-center space-x-1.5">
+                <li>
+                    <a href="./index.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">About</a>
+                </li>
+                <li>
+                    <a href="./services.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Services</a>
+                </li>
+                <li>
+                    <a href="./office.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Office</a>
+                </li>
+                <li><a href="./product.html" aria-current="page" class="px-4 py-2 rounded-full text-[14px] font-bold text-[#ff7316] bg-[#ff7316]/10 transition-all">Products</a></li>
+                <li>
+                    <a href="./partners.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Partners</a>
+                </li>
+                <li>
+                    <a href="./knowledge.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Knowledge</a>
+                </li>
+                <li>
+                    <a href="./privacy.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="./verify.html" class="px-4 py-2 rounded-full text-[14px] font-semibold text-slate-600 hover:text-[#ff7316] hover:bg-[#ff7316]/10 transition-all duration-300">Verify</a>
+                </li>
+            </ul>
+
+            <div class="hidden lg:block relative z-50">
+                <a href="./contact.html" class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-[#ff7316] to-[#dc2626] rounded-full overflow-hidden shadow-[0_4px_15px_rgba(255,115,22,0.35)] hover:shadow-[0_8px_25px_rgba(220,38,38,0.45)] transition-all duration-300 transform hover:-translate-y-0.5">
+                    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-20"></span>
+                    <span class="relative z-10 flex items-center gap-2">
+                        Contact Us <i class="fas fa-arrow-right text-xs transform group-hover:translate-x-1 transition-transform"></i>
+                    </span>
+                </a>
+            </div>
+
+            <div class="lg:hidden z-50 relative">
+                <div class="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center cursor-pointer border border-slate-200 hover:border-[#ff7316] hover:bg-[#ff7316]/5 transition-colors navIcon group">
+                    <div class="relative w-5 h-4 flex flex-col justify-between overflow-hidden">
+                        <span class="w-full h-[2.5px] bg-slate-800 group-hover:bg-[#ff7316] rounded-full transform transition-all duration-300 origin-left one"></span>
+                        <span class="w-full h-[2.5px] bg-slate-800 group-hover:bg-[#ff7316] rounded-full transition-all duration-300 two"></span>
+                        <span class="w-full h-[2.5px] bg-slate-800 group-hover:bg-[#ff7316] rounded-full transform transition-all duration-300 origin-left three"></span>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div id="mobileMenu" class="absolute top-full left-0 right-0 mt-3 bg-white/95 backdrop-blur-xl border border-slate-200/60 rounded-2xl shadow-[0_15px_40px_-15px_rgba(0,0,0,0.1)] opacity-0 invisible transform -translate-y-4 transition-all duration-300 ease-out z-40 overflow-hidden">
+            <div class="p-4 flex flex-col gap-1.5 max-h-[80vh] overflow-y-auto custom-scrollbar">
+                <a href="./index.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 flex items-center gap-3">
+                    <i class="fas fa-home w-5 text-center"></i> Home
+                </a>
+                <a href="./about.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-building w-5 text-center text-slate-400"></i> About
+                </a>
+                <a href="./services.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-shield-alt w-5 text-center text-slate-400"></i> Services
+                </a>
+                <a href="./office.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-map-marker-alt w-5 text-center text-slate-400"></i> Office
+                </a>
+                <a href="./product.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] flex items-center gap-3"><i class="fas fa-box w-5 text-center text-slate-400"></i> Products</a>
+                <a href="./partners.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-handshake w-5 text-center text-slate-400"></i> Partners
+                </a>
+                <a href="./knowledge.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-book-open w-5 text-center text-slate-400"></i> Knowledge
+                </a>
+                <a href="./privacy.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-user-shield w-5 text-center text-slate-400"></i> Privacy Policy
+                </a>
+                <a href="./verify.html" class="px-4 py-3 rounded-xl text-[15px] font-semibold text-slate-700 hover:bg-[#ff7316]/10 hover:text-[#ff7316] transition-colors flex items-center gap-3">
+                    <i class="fas fa-certificate w-5 text-center text-slate-400"></i> Verify
+                </a>
+
+                <div class="h-px bg-slate-100 my-2"></div>
+
+                <a href="./contact.html" class="mt-1 px-4 py-3.5 rounded-xl text-[15px] font-bold text-white bg-gradient-to-r from-[#ff7316] to-[#dc2626] text-center shadow-md flex items-center justify-center gap-2 transform active:scale-95 transition-all">
+                    Contact Us <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+
+    </header>
+</div>
+
+<main class="bg-[#0b1120] text-white"><section class="border-b border-white/10 bg-grid-pattern"><div class="max-w-7xl mx-auto px-6 py-20"><p class="text-orange-400 font-bold uppercase tracking-widest text-sm">wePro products</p><h1 class="text-4xl md:text-6xl font-extrabold mt-5">Technology for your <span class="text-[#ff7316]">everyday.</span></h1><p class="text-slate-300 text-lg max-w-2xl mt-6">Explore hardware and security solutions for your business and your devices.</p><div class="flex flex-wrap gap-3 mt-8"><a href="#hardware" class="rounded-full bg-[#ff7316] px-6 py-3 font-semibold">Hardware</a><a href="#antivirus" class="rounded-full border border-slate-500 px-6 py-3 font-semibold">Antivirus products</a></div></div></section><section id="hardware" class="max-w-7xl mx-auto px-6 py-20"><p class="text-orange-400 uppercase tracking-widest text-sm font-bold">Hardware</p><h2 class="text-3xl md:text-4xl font-bold mt-3">Products for your setup</h2><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-9"><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/laptop.avif" alt="Laptop" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Laptop</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Laptop</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/desktop.avif" alt="Desktop" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Desktop</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Desktop</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/monitor.avif" alt="Monitor" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Monitor</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Monitor</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/printer.webp" alt="Printer" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Printer</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Printer</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/router.png" alt="Router" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Router</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Router</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/switch.webp" alt="Switch" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Switch</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Switch</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/AP.png" alt="Access Point" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Access Point</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Access Point</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/firewall.png" alt="Firewall" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Firewall</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Firewall</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/server.avif" alt="Server" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Server</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Server</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/ram.jpg" alt="RAM" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">RAM</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about RAM</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/ssd.jpg" alt="SSD" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">SSD</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about SSD</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/hdd.png" alt="Seagate HDD" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">Seagate HDD</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about Seagate HDD</a></div></article><article class="rounded-2xl bg-white overflow-hidden text-slate-900"><div class="h-44 p-5 flex items-center justify-center"><img src="./catalog/Products Page/ups.png" alt="UPS" class="max-h-full max-w-full object-contain"></div><div class="p-5 border-t border-slate-100"><h3 class="font-bold text-lg">UPS</h3><a class="text-orange-600 text-sm font-semibold" href="./contact.html">Enquire about UPS</a></div></article></div></section><section class="bg-slate-900 border-y border-white/10"><div class="max-w-7xl mx-auto px-6 py-16"><p class="text-orange-400 uppercase tracking-widest text-sm font-bold">Business security · EPP / EDR / XDR</p><h2 class="text-3xl font-bold mt-3">Protection for your business</h2><div class="flex flex-wrap gap-3 mt-7"><span class="rounded-xl border border-slate-700 bg-slate-800 px-5 py-3 font-semibold">Bitdefender</span><span class="rounded-xl border border-slate-700 bg-slate-800 px-5 py-3 font-semibold">Checkpoint</span><span class="rounded-xl border border-slate-700 bg-slate-800 px-5 py-3 font-semibold">Sophos</span><span class="rounded-xl border border-slate-700 bg-slate-800 px-5 py-3 font-semibold">Trend AI</span><span class="rounded-xl border border-slate-700 bg-slate-800 px-5 py-3 font-semibold">G Data</span></div><a href="./contact.html" class="inline-block mt-7 text-orange-400 font-semibold">Contact us for business solutions</a></div></section><section id="antivirus" class="max-w-7xl mx-auto px-6 py-20"><p class="text-orange-400 uppercase tracking-widest text-sm font-bold">Personal security</p><h2 class="text-3xl md:text-4xl font-bold mt-3">Antivirus products</h2><p class="text-slate-300 mt-4">Explore features and annual device options. Contact us for pricing in MMK.</p><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Bitdefender/antivirus plus.jpg" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Bitdefender</p><h3 class="font-bold text-lg">Bitdefender Antivirus Plus</h3></div></div><p class="text-slate-500 mt-5">1 or 3 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=bitdefender-antivirus-plus">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Bitdefender/internet security.png" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Bitdefender</p><h3 class="font-bold text-lg">Bitdefender Internet Security</h3></div></div><p class="text-slate-500 mt-5">1 or 3 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=bitdefender-internet-security">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./assets/img/partners/Bitdefender.png" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Bitdefender</p><h3 class="font-bold text-lg">Bitdefender Antivirus for Mac</h3></div></div><p class="text-slate-500 mt-5">1 or 3 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=bitdefender-mac">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Bitdefender/total security.png" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Bitdefender</p><h3 class="font-bold text-lg">Bitdefender Total Security</h3></div></div><p class="text-slate-500 mt-5">5 or 10 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=bitdefender-total-security">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Bitdefender/Premium Security.jpg" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Bitdefender</p><h3 class="font-bold text-lg">Bitdefender Premium Security</h3></div></div><p class="text-slate-500 mt-5">On request </p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=bitdefender-premium">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Bitdefender/ultimate security.jpg" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Bitdefender</p><h3 class="font-bold text-lg">Bitdefender Ultimate Security</h3></div></div><p class="text-slate-500 mt-5">On request </p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=bitdefender-ultimate">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Dr.web/security space.png" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Dr.Web</p><h3 class="font-bold text-lg">Dr.Web Security Space (PC)</h3></div></div><p class="text-slate-500 mt-5">1 or 3 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=drweb-pc">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Dr.web/security space.png" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Dr.Web</p><h3 class="font-bold text-lg">Dr.Web Security Space (Android)</h3></div></div><p class="text-slate-500 mt-5">1 or 5 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=drweb-android">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Kaspersky/kaspersky standard.webp" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Kaspersky</p><h3 class="font-bold text-lg">Kaspersky Standard</h3></div></div><p class="text-slate-500 mt-5">1, 3 or 5 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=kaspersky-standard">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Kaspersky/kaspersky plus.webp" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Kaspersky</p><h3 class="font-bold text-lg">Kaspersky Plus</h3></div></div><p class="text-slate-500 mt-5">1, 3, 5 or 10 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=kaspersky-plus">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/Kaspersky/kaspersky premium.webp" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">Kaspersky</p><h3 class="font-bold text-lg">Kaspersky Premium</h3></div></div><p class="text-slate-500 mt-5">1, 3 or 4 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=kaspersky-premium">View details</a></article><article class="bg-white text-slate-900 rounded-2xl p-6 flex flex-col"><div class="flex items-center gap-4"><img src="./catalog/Products/McAfee/total security.jpg" alt="" class="w-16 h-16 rounded-full object-contain bg-slate-50 border border-slate-100"><div><p class="text-sm text-orange-600 font-semibold">McAfee</p><h3 class="font-bold text-lg">McAfee Total Protection</h3></div></div><p class="text-slate-500 mt-5">1, 3, 5 or 10 devices / year</p><a class="mt-5 font-bold text-orange-600 hover:text-orange-800" href="./product-detail.html?id=mcafee-total">View details</a></article></div></section></main>
+    <!-- Divider -->
+    <div class="border-t border-slate-200"></div>
+
+    <!-- Footer (Original Retained) -->
+         <footer class=" lg:max-w-7xl container mx-auto md:flex justify-between items-start mt-5 md:mt-10  px-5 ">
+
+        <!-- Logo start  -->
+         <section class="">
+
+            <article class="hidden md:block pr-5 lg:pr-0">
+                <img class="w-36" src="./assets/img/weprologo.png" alt="">
+            </article>
+         </section>
+        <!-- Logo end -->
+
+        <!-- footer line start  -->
+         <section class="grid grid-cols-3 md:grid-col justify-center gap-5 md:flex md:space-x-4">
+
+            <!-- home start  -->
+            <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./index.html#home" class="text-sm lg:text-base font-semibold">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./index.html#brands" class="">
+                            Brands
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./index.html#partners" class="">
+                            Partners
+                        </a>
+                    </li>
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./index.html#customers" class="">
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- home end  -->
+
+             <!--About start  -->
+            <article class="">
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./about.html" class="text-sm lg:text-base font-semibold">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#capabilities" class="">
+                            Capabilities
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#vision" class="">
+                            Vision
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#mission" class="">
+                            Mission
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./about.html#product" class="">
+                            Products
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!--About end  -->
+
+              <!-- Service start  -->
+              <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./services.html" class="text-sm lg:text-base font-semibold">
+                            Services
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#offensive" class="">
+                            Offensive
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#defensive" class="">
+                            Defensive
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#training" class="">
+                            Training
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#developement" class="">
+                            Developement
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#trading" class="">
+                            Trading
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./services.html#methodologies" class="">
+                            Methodologies
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- Service end  -->
+
+
+
+            <!-- Knowledge start  -->
+            <article class="">
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./knowledge.html" class="text-sm lg:text-base font-semibold">
+                            Knowledge
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./knowledge.html#cyber" class="">
+                            Cyber Security
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./knowledge.html#analysis" class="">
+                            Analysis Process
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./knowledge.html#aiOffSec" class="">
+                            AIOffsec
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./verify.html" class="">
+                            Verify Certificate
+                        </a>
+                    </li>
+
+                </ul>
+            </article>
+            <!-- Knowledge end  -->
+
+             <!-- Office start  -->
+            <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./office.html" class="text-sm lg:text-base font-semibold">
+                            Office
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./office.html#gallery" class="">
+                            Gallery
+                        </a>
+                    </li>
+                </ul>
+
+            </article>
+            <!-- Office end  -->
+
+
+             <!-- Privacy start  -->
+            <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./office.html" class="text-sm lg:text-base font-semibold">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./privacy.html" class="">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+
+            </article>
+            <!-- Privacy end  -->
+
+
+
+            <!-- Contact us start  -->
+            <article>
+                <ul class="flex flex-col space-x-1 md:space-y-2">
+                    <li class="hover:text-blue-700 duration-300 text-slate-700">
+                        <a href="./contact.html" class="text-sm lg:text-base font-semibold">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="hover:text-blue-700 duration-300 text-xs lg:text-sm mt-1 md:mt-4 text-slate-700">
+                        <a href="./contact.html#map" class="">
+                            Map
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-4 xl:hidden ">
+                    <div class="flex justify-center">
+                        <img class="w-20 xl:w-32 rounded-xl shadow-xl" src="./assets/img/LocationQr.png" alt="Qr Code for location!">
+                    </div>
+                    <p class="text-center text-base md:ml-2 md:mx-0 md:text-xl xl:text-2xl text-blue-900 ">
+                        Location
+                    </p>
+                 </div>
+            </article>
+            <!-- Contact us end  -->
+
+            <!-- Scan= start   -->
+            <article class="md:hidden w-full col-span-3">
+               <section class="">
+                   <article class="flex md:gap-x-0 items-center justify-center">
+
+
+                       <!-- Apps start  -->
+                       <div class="md:mt-5">
+                           <div class="flex items-center gap-x-2">
+                            <a target="_blank" href="https://www.facebook.com/weprosec/" class="bg-blue-500 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-blue-600 duration-300 ">
+                                <i class="fab fa-facebook-f text-white"></i>
+                             </a>
+
+                             <a target="_blank" href="https://linkedin.com/company/wepro" class="bg-cyan-600 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-cyan-700 duration-300 ">
+                               <i class="fab fa-linkedin-in text-white"></i>
+                            </a>
+                             <a target="_blank" href="https://www.tiktok.com/@weprosec" class="bg-slate-800 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-slate-900 duration-300 ">
+                               <i class="fab fa-tiktok text-white"></i>
+                            </a>
+
+                           </div>
+                       </div>
+                       <!-- Apps end -->
+
+
+                   </article>
+                </section>
+           </article>
+           <!-- Scan End  -->
+
+        </section>
+        <!-- footer line end  -->
+
+
+        <!-- Social Media Platform start  -->
+         <section class="mt-5 md:mt-0 hidden xl:block">
+            <article class="flex md:gap-x-0 flex-col items-center">
+                <div class="">
+                   <div class="">
+                       <img class="w-24 xl:w-32 rounded-xl shadow-lg border border-slate-200" src="./assets/img/LocationQr.png" alt="Qr Code for location!">
+                   </div>
+                   <p class="text-base mx-auto md:mx-0 text-center md:text-xl xl:text-2xl text-blue-900 mt-3 ">
+                       Location
+                   </p>
+                </div>
+
+                <!-- Apps start  -->
+                <div class="mt-3">
+                    <div class="flex items-center gap-x-2">
+                        <a target="_blank" href="https://www.facebook.com/weprosec/" class="bg-blue-500 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-blue-600 duration-300 ">
+                            <i class="fab fa-facebook-f text-white"></i>
+                         </a>
+
+                         <a target="_blank" href="https://linkedin.com/company/wepro" class="bg-cyan-600 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-cyan-700 duration-300 ">
+                           <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+
+                         <a target="_blank" href="https://www.tiktok.com/@weprosec" class="bg-slate-800 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-slate-900 duration-300 ">
+                           <i class="fab fa-tiktok text-white"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Apps end -->
+
+
+            </article>
+         </section>
+        <!-- Social Media Platform end  -->
+
+
+
+    </footer>
+
+    <div class="">
+        <div class="hidden xl:hidden lg:flex justify-end mt-5 items-center gap-x-2 px-5">
+            <a target="_blank" href="https://www.facebook.com/share/14UaD6QRfJ/" class="bg-blue-500 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-blue-600 duration-300">
+                <i class="fab fa-facebook-f text-white"></i>
+             </a>
+             <a target="_blank" href="https://www.linkedin.com/company/yecceducation" class="bg-cyan-600 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-cyan-700 duration-300">
+               <i class="fab fa-linkedin-in text-white"></i>
+            </a>
+             <a target="_blank" href="https://www.tiktok.com/@weprosec" class="bg-slate-800 flex justify-center items-center rounded-full w-8 h-8 shadow-lg hover:bg-slate-900 duration-300">
+               <i class="fab fa-tiktok text-white"></i>
+            </a>
+        </div>
+    </div>
+
+    <section class="bg-[#ff7316] text-slate-100 py-4 md:py-2 mt-10">
+        <h1 class="text-center font-bold text-slate-800">© 2026 wePro. All rights reserved.</h1>
+    </section>
+
+    <script>
+        // --- Navbar Slidout Trigger Block ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const navIcon = document.querySelector('.navIcon');
+            const aside = document.getElementById('aside');
+            const one = document.querySelector('.one');
+            const two = document.querySelector('.two');
+            const three = document.querySelector('.three');
+
+            if(navIcon) {
+                navIcon.addEventListener('click', () => {
+                    one.classList.toggle('active');
+                    two.classList.toggle('active');
+                    three.classList.toggle('active');
+                    aside.classList.toggle('-translate-x-full');
+                });
+            }
+        });
+    </script>
+    <script>
+            // --- Navbar Floating & Dropdown Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const navIcon = document.querySelector('.navIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const one = document.querySelector('.one');
+    const two = document.querySelector('.two');
+    const three = document.querySelector('.three');
+
+    if(navIcon && mobileMenu) {
+        navIcon.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent document click from firing
+
+            // Toggle Hamburger Animation (Smooth X)
+            one.classList.toggle('rotate-45');
+            one.classList.toggle('translate-x-[2px]');
+            one.classList.toggle('-translate-y-[1px]');
+
+            two.classList.toggle('opacity-0');
+            two.classList.toggle('translate-x-4');
+
+            three.classList.toggle('-rotate-45');
+            three.classList.toggle('translate-x-[2px]');
+            three.classList.toggle('translate-y-[1px]');
+
+            // Toggle Dropdown Menu Visibility
+            if(mobileMenu.classList.contains('invisible')) {
+                mobileMenu.classList.remove('invisible', 'opacity-0', '-translate-y-4');
+                mobileMenu.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+                mobileMenu.classList.add('opacity-0', '-translate-y-4');
+                setTimeout(() => {
+                    mobileMenu.classList.add('invisible');
+                }, 300); // Wait for transition to finish
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navIcon.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('invisible')) {
+                navIcon.click(); // Trigger the click to close and animate hamburger back
+            }
+        });
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+const id = new URLSearchParams(location.search).get('id');
+const product = catalog.find(item => item.id === id);
+const root = document.getElementById('detail');
+if (!product) { root.innerHTML = '<h1 class="text-3xl font-bold">Product not found</h1><p class="mt-4 text-slate-300">Please return to the product list.</p>'; } else {
+ document.title = product.name + ' | wePro';
+ const sections = Object.entries(product.sections).map(([name, features]) => `<section class="bg-slate-800/70 border border-white/10 rounded-2xl p-6"><h2 class="text-xl font-bold text-orange-400">${name}</h2><ul class="mt-5 space-y-3">${features.map(feature => `<li class="flex gap-3 text-slate-200"><span class="text-orange-400">✓</span><span>${feature}</span></li>`).join('')}</ul></section>`).join('');
+ root.innerHTML = `<div class="grid md:grid-cols-[220px_1fr] gap-8 items-center"><div class="bg-white rounded-3xl p-6 h-52 flex items-center justify-center"><img src="${product.img}" alt="" class="max-h-full max-w-full object-contain"></div><div><p class="uppercase tracking-widest text-orange-400 font-semibold text-sm">${product.brand} · Personal security</p><h1 class="text-3xl md:text-5xl font-extrabold mt-3">${product.name}</h1><p class="text-slate-300 mt-5">${product.devices === 'On request' ? product.note : `Annual options: ${product.devices} devices`}</p><p class="text-slate-400 mt-2">Contact us for pricing in MMK and availability.</p><a href="./contact.html" class="inline-block mt-6 bg-[#ff7316] rounded-full px-6 py-3 font-semibold">Enquire about this product</a></div></div>${sections ? `<div class="mt-16"><h2 class="text-3xl font-bold mb-7">Product features</h2><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">${sections}</div></div>` : ''}`;
+}
