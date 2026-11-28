@@ -93,7 +93,7 @@ const catalog = [
     "name": "Bitdefender Antivirus for Mac",
     "brand": "Bitdefender",
     "devices": "1 or 3",
-    "img": "assets/img/partners/Bitdefender.png",
+    "img": "catalog/Products/Bitdefender/antivirus-for-mac.png",
     "sections": {
       "Mac": [
         "Safe Files",
